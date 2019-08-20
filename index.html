@@ -41,7 +41,7 @@
       return res
     }, {})
 
-    const { w = 64, h = 64 } = parseQS(location.search)
+    const { w = 128, h = 128 } = parseQS(location.search)
 
     const canvas = document.querySelector('canvas')
     const ctx = canvas.getContext('2d')
