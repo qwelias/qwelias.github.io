@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  color: #222;
 }
 html, body {
   height: 100%;
@@ -10,6 +11,9 @@ html, body {
 a {
   text-decoration: none;
   color: #555;
+}
+a:hover {
+  text-decoration: underline;
 }
 a:visited {
   color: #777;
