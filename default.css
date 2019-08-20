@@ -9,8 +9,8 @@ html, body {
 
 a {
   text-decoration: none;
-  color: #222;
+  color: #555;
 }
 a:visited {
-  color: #444;
+  color: #777;
 }
