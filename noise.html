@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style media="screen">
+      html, body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        font-size: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas></canvas>
+    <script type="text/javascript">
+    const colors = [
+      [255, 255, 255, 255],
+      [255, 0, 0, 255],
+      [0, 255, 0, 255],
+      [0, 0, 255, 255],
+      [0, 0, 0, 255],
+    ]
+    const getRNGItem = arr => () => arr[Math.round(Math.random() * 10000) % arr.length]
+    const rngColor = getRNGItem(colors)
+
+    const getImgArray = (length = length) => {
+      const arr = new Array(length).fill(null).map(rngColor)
+      return arr.reduce((acc, pix, idx) => {
+        for (let i = 0; i < 4; i++) {
+          acc[idx * 4 + i] = pix[i]
+        }
+        return acc
+      }, new Uint8ClampedArray(length * 4))
+    }
+
+    const searchSplitRX = /[\?&]/g
+    const parseQS = search => search.split(searchSplitRX).filter(Boolean).map(token => {
+      return token.split('=')
+    }).reduce((res, pair) => {
+      res[pair[0]] = pair[1]
+      return res
+    }, {})
+
+    const { w = 256, h = 256 } = parseQS(location.search)
+
+    const canvas = document.querySelector('canvas')
+    const ctx = canvas.getContext('2d')
+    canvas.height = document.documentElement.clientHeight
+    canvas.width = document.documentElement.clientWidth
+
+    const fireRepaint = () => {
+      const img = new ImageData(getImgArray(w*h), w, h)
+      createImageBitmap(img).then(bm => {
+        ctx.fillStyle = ctx.createPattern(bm, 'repeat')
+        ctx.fillRect(0, 0, canvas.width, canvas.height)
+        requestAnimationFrame(fireRepaint)
+      })
+    }
+
+    requestAnimationFrame(fireRepaint)
+    </script>
+  </body>
+</html>
