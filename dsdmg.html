@@ -15,10 +15,10 @@
             const calcDmg = (ATK, DEF, ABS) => calcDef(ATK, DEF) * ABS / 100;
 
             const calcDef = (ATK, DEF) => {
-                if (DEF > ATK*8) return 0.1*ATK;
-                if (DEF > ATK) return (19.2/49 * (ATK/DEF-0.125)^ 2 +0.1) * ATK;
-                if (DEF > 0.4*ATK) return (-0.4/3 * (ATK/DEF-2.5)^ 2 +0.7) * ATK;
-                if (DEF > 0.125*ATK) return (-0.8/121 * (ATK/DEF-8)^ 2 +0.9) * ATK;
+                if (DEF >= ATK*8) return 0.1*ATK;
+                if (DEF >= ATK) return (19.2/49 * (ATK/DEF-0.125)^ 2 +0.1) * ATK;
+                if (DEF >= 0.4*ATK) return (-0.4/3 * (ATK/DEF-2.5)^ 2 +0.7) * ATK;
+                if (DEF >= 0.125*ATK) return (-0.8/121 * (ATK/DEF-8)^ 2 +0.9) * ATK;
                 if (DEF < 0.125*ATK) return 0.90 * ATK;
             };
         </script>
