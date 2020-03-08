@@ -26,7 +26,8 @@
       };
       
       document.querySelector('form').addEventListener('submit', e => {
-        debugger;
+        navigator.clipboard.write(baz(e.target.elements[0].value.split(' ')));
+        return false;
       });
     </script>
   </body>
