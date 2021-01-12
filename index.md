@@ -1,2 +1,1 @@
-- [cv](./cv)
-- [noise](./noise)
+hello there ( ͡° ͜ʖ ͡°)
