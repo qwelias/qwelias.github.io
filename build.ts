@@ -1,8 +1,13 @@
 import { promises as fs } from 'fs'
 import Path from 'path'
 import MDIT from 'markdown-it'
+import MA from 'markdown-it-anchor'
 
-const MD = MDIT('commonmark')
+const MD = MDIT('commonmark', {
+    html: true,
+    linkify: true,
+    typographer: true,
+}).use(MA)
 
 const readDirR = async (dir: string, files: string[] = []) => {
     const entries = await fs.readdir(dir, { withFileTypes: true })
@@ -20,6 +25,7 @@ const wrapHtml = (body: string) => [
     '<html>',
     '<head>',
     '<title>( ͡° ͜ʖ ͡°)</title>',
+    '<link href="/readable.css" rel="stylesheet" />',
     '</head>',
     '<body>',
     '',
@@ -30,20 +36,15 @@ const wrapHtml = (body: string) => [
 
 ;(async () => {
     const files = await readDirR('docs')
-    await Promise.all(files.map(async file => {
+    await Promise.all(files.filter(f => f.endsWith('.html')).map(async file => {
         const text = String(await fs.readFile(file))
-        switch (Path.extname(file)) {
-        case '.html': {
-            if (text.startsWith('<!-- keep -->')) return
-            return await fs.unlink(file)
-        }
-        case '.md': {
-            const html = wrapHtml(MD.render(text))
-            return await fs.writeFile(file.replace(/\.md$/, '.html'), html)
-        }
-        default:
-            console.warn('Unknown file', file)
-        }
+        if (text.startsWith('<!-- keep -->')) return
+        return await fs.unlink(file)
+    }))
+    await Promise.all(files.filter(f => f.endsWith('.md')).map(async file => {
+        const text = String(await fs.readFile(file))
+        const html = wrapHtml(MD.render(text))
+        return await fs.writeFile(file.replace(/\.md$/, '.html'), html)
     }))
 })().catch(reason => {
     console.error(reason)

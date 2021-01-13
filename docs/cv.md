@@ -1,19 +1,17 @@
-# Ilia Baryshnikov
+## Ilia Baryshnikov
 Software Engineer
 
-![my face](https://i.imgur.com/ET6a4fq.png)
-
 ## Contents
-- [Contents](#Contents)
-- [Contacts](#Contacts)
-- [Base](#Base)
-- [Summary](#Summary)
-- [Education](#Education)
+- [Contents](#contents)
+- [Contacts](#contacts)
+- [Base](#base)
+- [Summary](#summary)
+- [Education](#education)
   - [Ural Federal University](#ural-federal-university)
-- [Experience](#Experience)
-  - [EPAM Systems](#EPAM-Systems)
-  - [Ridero](#Ridero)
-  - [JetTeam](#JetTeam)
+- [Experience](#experience)
+  - [EPAM Systems](#epam-Systems)
+  - [Ridero](#ridero)
+  - [JetTeam](#jetteam)
 
 ## Contacts
 [My Telegram](https://t.me/qwelias) is preferable, but [contact@qwelias.me](mailto:contact@qwelias.me) is fine too.
@@ -178,7 +176,7 @@ Done:
 - wrapper of proprietary video Flash-player for [Yandex](https://yandex.ru) look-and-feel interface
 - system for automatically generating quizes based on Wikipedia, using [DBPedia](https://wiki.dbpedia.org/) semantic graph
 - configurable event-calendar system for [DocktorNaUchebe](https://doctornauchebe.ru/)
-- base architecture and system for extracting and formatting blog-post-like content from various sites and blog platforms for [Ridero](#Ridero)
+- base architecture and system for extracting and formatting blog-post-like content from various sites and blog platforms for [Ridero](#ridero)
 - update system and various improvements for mobile game Nistagmus (currently removed from store)
 - probably something else I cannot remember
 
