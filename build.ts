@@ -20,11 +20,11 @@ const readDirR = async (dir: string, files: string[] = []) => {
     return files
 }
 
-const wrapHtml = (body: string) => [
+const wrapHtml = (body: string, title: string = '') => [
     '<!DOCTYPE html>',
     '<html>',
     '<head>',
-    '<title>( ͡° ͜ʖ ͡°)</title>',
+    `<title>${title}</title>`,
     '<link href="/readable.css" rel="stylesheet" />',
     '</head>',
     '<body>',
@@ -43,8 +43,9 @@ const wrapHtml = (body: string) => [
     }))
     await Promise.all(files.filter(f => f.endsWith('.md')).map(async file => {
         const text = String(await fs.readFile(file))
-        const html = wrapHtml(MD.render(text))
-        return await fs.writeFile(file.replace(/\.md$/, '.html'), html)
+        const name = file.slice(0, -3)
+        const html = wrapHtml(MD.render(text), Path.basename(name))
+        return await fs.writeFile(name + '.html', html)
     }))
 })().catch(reason => {
     console.error(reason)
