@@ -1,6 +1,15 @@
+@media (prefers-color-scheme: dark) {
+    html {
+        filter: sepia(0.1) invert(1);
+    }
+}
+
 html {
     display: flex;
     place-content: center;
+    filter: sepia(0.1) invert(0);
+    background-color: #eee;
+    color: #111;
 }
 
 body {
