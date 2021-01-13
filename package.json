@@ -1,0 +1,31 @@
+{
+  "name": "qwelias.github.io",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "ts-node build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://qwelias@github.com/qwelias/qwelias.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qwelias/qwelias.github.io/issues"
+  },
+  "homepage": "https://github.com/qwelias/qwelias.github.io#readme",
+  "devDependencies": {
+    "@types/markdown-it": "^12.0.1",
+    "@types/node": "^14.14.20",
+    "@typescript-eslint/eslint-plugin": "^4.13.0",
+    "eslint": "^7.17.0",
+    "eslint-config-standard-with-typescript": "^19.0.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.1.0",
+    "markdown-it": "^12.0.4",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  }
+}

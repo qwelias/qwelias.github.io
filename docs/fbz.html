@@ -1,3 +1,4 @@
+<!-- keep -->
 <!DOCTYPE html>
 <html>
   <head>
@@ -24,10 +25,10 @@
           }
           return r;
       };
-      
+
       document.querySelector('form').addEventListener('submit', e => {
         e.preventDefault();
-        
+
         const inp = e.target.elements[0];
         navigator.clipboard.writeText(baz(inp.value.split(' ')));
         inp.value = '';
