@@ -1,6 +1,8 @@
 html {
-    height: 100%;
-    width: 100%;
+    display: flex;
+    place-content: center;
+}
+
+body {
     margin: 0;
-    padding: 0;
 }
