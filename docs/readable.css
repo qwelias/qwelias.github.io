@@ -13,6 +13,9 @@
         --invert: 0 !important;
         --sepia: 0 !important;
     }
+    body {
+        box-shadow: none;
+    }
 }
 
 html {
@@ -21,6 +24,7 @@ html {
     filter: sepia(var(--sepia)) invert(var(--invert));
     background-color: #dfdfdf;
     color: #111;
+    height: 100%;
 }
 
 body {
