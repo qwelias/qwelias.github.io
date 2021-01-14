@@ -20,34 +20,39 @@ const readDirR = async (dir: string, files: string[] = []) => {
     return files
 }
 
-const wrapHtml = (body: string, title: string = '') => [
-    '<!DOCTYPE html>',
-    '<html>',
-    '<head>',
-    `<title>${title}</title>`,
-    '<meta name="viewport" content="width=device-width, initial-scale=1">',
-    '<link href="/readable.css" rel="stylesheet" />',
-    '</head>',
-    '<body>',
-    '',
-    body,
-    '</body>',
-    '</html>',
-].join('\n')
+const wrapHtml = (main: string, title: string = '') => `
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>${title}</title>
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <link href=/css/readable.css rel=stylesheet />
+        <script type=module src=/js/dark-toggle.js>
+        <script type=module src=/js/details-toggle.js>
+    </head>
+    <body>
+        <header>
+        </header>
+        <main>
+            ${main}
+        </main>
+    </body>
+</html>
+`
 
 ;(async () => {
-    const files = await readDirR('docs')
-    await Promise.all(files.filter(f => f.endsWith('.html')).map(async file => {
+    await Promise.all(((await readDirR('docs')).filter(f => f.endsWith('.html')).map(async file => {
         const text = String(await fs.readFile(file))
         if (text.startsWith('<!-- keep -->')) return
         return await fs.unlink(file)
-    }))
-    await Promise.all(files.filter(f => f.endsWith('.md')).map(async file => {
+    })))
+
+    await Promise.all(((await readDirR('md')).map(async file => {
         const text = String(await fs.readFile(file))
-        const name = file.slice(0, -3)
+        const name = file.slice(3, -3)
         const html = wrapHtml(MD.render(text), Path.basename(name))
-        return await fs.writeFile(name + '.html', html)
-    }))
+        return await fs.writeFile('docs/' + name + '.html', html)
+    })))
 })().catch(reason => {
     console.error(reason)
     process.exit(1)
