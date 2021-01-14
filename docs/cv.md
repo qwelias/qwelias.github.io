@@ -1,4 +1,4 @@
-## Ilia Baryshnikov
+## Ilia Baryshnikov (under construction)
 Software Engineer
 
 ## Contents
@@ -8,27 +8,30 @@ Software Engineer
 - [Summary](#summary)
 - [Education](#education)
   - [Ural Federal University](#ural-federal-university)
-- [Experience](#experience)
+- [Employments](#employments)
   - [EPAM Systems](#epam-Systems)
   - [Ridero](#ridero)
   - [JetTeam](#jetteam)
 
 ## Contacts
-[My Telegram](https://t.me/qwelias) is preferable, but [contact@qwelias.me](mailto:contact@qwelias.me) is fine too.
+- [Telegram](https://t.me/qwelias)
+- [contact@qwelias.me](mailto:contact@qwelias.me)
 
 ## Base
 Male
 
 Born 1993-11-08, Russia, Yekaterinburg
 
-Currently live in Belarus, Minsk
+Currently live in Oslo, Norway
+
+Open for remote/relocation opportunities
 
 ## Summary
 - JavaScript engineer since September 2014
 - Linux all the way
-- used to do front-end, not so much lately, mainly waiting for that transpilation hype to go away (hopefully)
+- used to do front-end, not so much lately
 - mostly do back-end in NodeJS, lots of experience here
-- sometimes do DevOps related work, not as much as I'd like to tho
+- not shy of DevOps related work
 
 ## Education
 
@@ -36,7 +39,7 @@ Currently live in Belarus, Minsk
 
 #### *2012 - 2016* | Bachelor of Sciense in Applied Informatics, institute of Mathematics and Computer Science
 
-## Experience
+## Employments
 
 ### [EPAM Systems](https://www.epam.com)
 
@@ -63,7 +66,7 @@ Used:
 
 #### *Jan-2018 - Dec-2018* | Mobile eCAT development for [Schneider-Electric](https://www.schneider-electric.com)
 Done:
-- adopted solid code style standard based on standardjs and past experience
+- adopted code style standard based on standardjs and past experience
 - established missing CI process
 - fixed malfuntioning CD process
 - enforced focuced serivce development (one service per responsibility area)
@@ -157,7 +160,7 @@ Used:
 - atom, npm, gulp, docker-compose, git
 - JavaScript, GitBook, Docker, RevealJS, D3JS, WebSockets, KnockoutJS, RabbitMQ, ngnix
 
-#### *Jan-2016 - Apr-2016* | Microsoft. Portal for competition among schoolchildren in the nominations for best mobile app, game, and web-site
+#### *Jan-2016 - Apr-2016* | Microsoft. Portal for competition among pupils in the nominations for best mobile app, game, and web-site
 
 Done:
 - integrated the system with Microsoft Azure and Microsoft Account services.
