@@ -19,12 +19,16 @@ html {
     display: flex;
     place-content: center;
     filter: sepia(var(--sepia)) invert(var(--invert));
-    background-color: #eee;
+    background-color: #dfdfdf;
     color: #111;
 }
 
 body {
+    padding: 0 1.5em;
+    flex-basis: 100%;
     margin: 0;
     max-width: 50em;
     font-family: monospace;
+    background-color: #eee;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 0.1em 0.4em;
 }
