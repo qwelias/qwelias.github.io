@@ -10,8 +10,8 @@
 }
 @media print {
     :root {
-        --invert: 0;
-        --sepia: 0;
+        --invert: 0 !important;
+        --sepia: 0 !important;
     }
 }
 
