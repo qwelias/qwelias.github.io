@@ -1,5 +1,6 @@
 :root {
     --invert: 0;
+    --sepia: 0.1;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -10,13 +11,14 @@
 @media print {
     :root {
         --invert: 0;
+        --sepia: 0;
     }
 }
 
 html {
     display: flex;
     place-content: center;
-    filter: sepia(0.1) invert(var(--invert));
+    filter: sepia(var(--sepia)) invert(var(--invert));
     background-color: #eee;
     color: #111;
 }
