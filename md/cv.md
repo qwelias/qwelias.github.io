@@ -9,6 +9,7 @@ I do software things
 - [Education](#education)
   - [Ural Federal University](#ural-federal-university)
 - [Employments](#employments)
+  - [Schibsted](#schibsted)
   - [EPAM Systems](#epam-systems)
   - [Ridero](#ridero)
   - [JetTeam](#jetteam)
@@ -20,7 +21,7 @@ I do software things
 ## Base
 Male
 
-Born 1993-11-08, Russia, Yekaterinburg
+Born 1993-11-08, Ural, Russia
 
 Currently live in Oslo, Norway
 
@@ -40,6 +41,15 @@ Open for remote/relocation/local opportunities
 #### *2012 - 2016* | Bachelor of Sciense in Applied Informatics, institute of Mathematics and Computer Science
 
 ## Employments
+
+### [Schibsted](https://schibsted.com/about/)
+
+#### *Feb-2020 - now* | Sports API, [vglive.no](https://vglive.no), [malservice.aftonbladet.se](https://malservice.aftonbladet.se)
+Design, Development, and Maintenance of new and existing solutions (front/back-end) for sports data aggregation and delivery pipeline.
+
+Done: TBD
+
+Used: TBD
 
 ### [EPAM Systems](https://www.epam.com)
 
