@@ -7,6 +7,11 @@
         --invert: 1;
     }
 }
+@media print {
+    :root {
+        --invert: 0;
+    }
+}
 
 html {
     display: flex;
