@@ -24,7 +24,7 @@ html {
     filter: sepia(var(--sepia)) invert(var(--invert));
     background-color: #dfdfdf;
     color: #111;
-    height: 100%;
+    min-height: 100%;
 }
 
 body {
