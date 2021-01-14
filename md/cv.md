@@ -1,4 +1,4 @@
-## Ilia Baryshnikov (under construction)
+## Ilia Baryshnikov
 I do software things
 
 ## Contents
@@ -52,6 +52,7 @@ Done:
 - help with design and implementation of live-updates system for user-facing polls
 - help with cluster migration over to AWS EKS using Terraform
 - system architechture review and a techical proposal for reducing coupling
+- various fixes and improvements
 
 Used: Docker, bash, NodeJS, AWS, Terraform
 
