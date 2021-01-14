@@ -38,27 +38,28 @@ Open for remote/relocation/local opportunities
 
 ### [Ural Federal University](https://urfu.ru/en/)
 
-#### *2012 - 2016* | Bachelor of Sciense in Applied Informatics, institute of Mathematics and Computer Science
+#### *2012 — 2016* | Bachelor of Sciense in Applied Informatics, institute of Mathematics and Computer Science
 
 ## Employments
 
 ### [Schibsted](https://schibsted.com/about/)
 
-#### *Feb-2020 - now* | Sports API, [vglive.no](https://vglive.no), [malservice.aftonbladet.se](https://malservice.aftonbladet.se)
+#### *Feb-2020 — now* | Sports API, [vglive.no](https://vglive.no), [malservice.aftonbladet.se](https://malservice.aftonbladet.se)
 Design, development, and maintenance of new and existing solutions for sports data aggregation and delivery pipeline.
 
 **Done**:
 - design and implementation of service integration tests framework and environment
 - help with design and implementation of live-updates system for user-facing polls
 - help with cluster migration over to AWS EKS using Terraform
+- initiaied migration onto TypeScript and better types culture
 - system architechture review and a techical proposal for reducing coupling
 - various fixes and improvements
 
-**Used**: Docker, bash, NodeJS, AWS, Terraform, Redis, PostgreSQL
+**Used**: Docker, bash, NodeJS, AWS, Terraform, Redis, PostgreSQL, TypeScript
 
 ### [EPAM Systems](https://www.epam.com)
 
-#### *Jan-2019 - Jan 2020* | Launcher Daemon for [Epic Games](https://www.epicgames.com)
+#### *Jan-2019 — Jan-2020* | Launcher Daemon for [Epic Games](https://www.epicgames.com)
 Design and implementation of headless client-side OS (Win, Mac) service for handling communications.
 
 **Done**:
@@ -72,9 +73,9 @@ Design and implementation of headless client-side OS (Win, Mac) service for hand
 - multiplatform CD automation pipeline
 - RPC communication protocol on Protocol Buffers over IPC transport
 
-**Used**: Perforce, UnrealEngine AutomationTool, ElectricCommander, bash, PowerShell, NodeJS, Google Protocol Buffers
+**Used**: Perforce, UnrealEngine AutomationTool, ElectricCommander, bash, PowerShell, NodeJS, Google Protocol Buffers, TypeScript
 
-#### *Jan-2018 - Dec-2018* | Mobile eCAT development for [Schneider-Electric](https://www.schneider-electric.com)
+#### *Jan-2018 — Dec-2018* | Mobile eCAT development for [Schneider-Electric](https://www.schneider-electric.com)
 Development, support, and design of microservice back-ends for mobile app catalogue with a number of second-party integrations.
 
 **Done**:
@@ -89,7 +90,7 @@ Development, support, and design of microservice back-ends for mobile app catalo
 
 **Used**: MongoDB, InfluxDB, Progress Kinvey, Docker, Chronograf, Grafana, NodeJS, Telegraf, ngnix, OpenID
 
-#### *Apr-2017 - Oct-2017* | MediaFirst TV platform for [Ericsson](https://www.ericsson.com)
+#### *Apr-2017 — Oct-2017* | MediaFirst TV platform for [Ericsson](https://www.ericsson.com)
 Development and support of Web-based live and on-demand media delivery platform for phones, tablets, desktops and TVs.
 
 **Done**:
@@ -101,7 +102,7 @@ Development and support of Web-based live and on-demand media delivery platform 
 
 ### [Ridero](https://ridero.ru)
 
-#### *Nov-2016 - Mar-2017* | Smart publishing system for everyone to create professional quality books
+#### *Nov-2016 — Mar-2017* | Smart publishing system for everyone to create professional quality books
 Development of internal tools for and web admin interface.
 
 **Done**:
@@ -116,7 +117,7 @@ Development of internal tools for and web admin interface.
 
 ### [JetTeam](https://jet.team)
 
-#### *Jul-2016 - Nov-2016* | Talmoloko. Daily delivery of dairy products
+#### *Jul-2016 — Nov-2016* | Talmoloko. Daily delivery of dairy products
 Development and deployment of back/front-end.
 
 **Done**:
@@ -126,7 +127,7 @@ Development and deployment of back/front-end.
 
 **Used**: MongoDB, NodeJS, nginx, KnockoutJS
 
-#### *Apr-2016 - Sep-2016* | UMMC HOLDING. Enterprise resource planning system for budgeting and forecasting
+#### *Apr-2016 — Sep-2016* | UMMC HOLDING. Enterprise resource planning system for budgeting and forecasting
 Help with development.
 
 **Done**:
@@ -137,7 +138,7 @@ Help with development.
 
 **Used**: MongoDB, PostgreSQL, Redis, Docker, RabbitMQ, NodeJS, ngnix, KnockoutJS
 
-#### *Jan-2016 - Apr-2016* | Microsoft. Portal for competition among pupils in the nominations for best mobile app, game, and web-site
+#### *Jan-2016 — Apr-2016* | Microsoft. Portal for competition among pupils in the nominations for best mobile app, game, and web-site
 Development and deployment of back/front-end.
 
 **Done**:
@@ -146,7 +147,7 @@ Development and deployment of back/front-end.
 
 **Used**: MSSQL, MS Azure, NodeJS, KnockoutJS
 
-#### *Sep-2014 - Nov-2016* | JetTeam. Various not-so-big projects
+#### *Sep-2014 — Nov-2016* | JetTeam. Various not-so-big projects
 
 **Done**:
 - wrapper of proprietary video Flash-player for [Yandex](https://yandex.ru) look-and-feel interface
