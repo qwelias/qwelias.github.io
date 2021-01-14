@@ -45,11 +45,15 @@ Open for remote/relocation/local opportunities
 ### [Schibsted](https://schibsted.com/about/)
 
 #### *Feb-2020 - now* | Sports API, [vglive.no](https://vglive.no), [malservice.aftonbladet.se](https://malservice.aftonbladet.se)
-Design, Development, and Maintenance of new and existing solutions (front/back-end) for sports data aggregation and delivery pipeline.
+Design, development, and maintenance of new and existing solutions for sports data aggregation and delivery pipeline.
 
-Done: TBD
+Done:
+- design and implementation of service integration tests framework and environment
+- help with design and implementation of live-updates system for user-facing polls
+- help with cluster migration over to AWS EKS using Terraform
+- system architechture review and a techical proposal for reducing coupling
 
-Used: TBD
+Used: Docker, bash, NodeJS, AWS, Terraform
 
 ### [EPAM Systems](https://www.epam.com)
 
@@ -57,49 +61,32 @@ Used: TBD
 Design and implementation of headless client-side OS (Win, Mac) service for handling communications.
 
 Done:
-- meetings, discussions, and research on MVP feature set with various team leads
 - compiled a design documentation for MVP feature set
 - maintaining project GitHub Wiki page
-- set up project skeleton and multiplatform build pipeline
 - project-specific licensing tools
-- implemented MVP feature set, covered with unit tests
-- framework for compiling OpenAPI spec from multiple linked files
+- implemented MVP feature set
 - bootstrapped integration tests implementation
 - graceful service shutdown handling
 - generating attribution for third-party software
 - multiplatform CD automation pipeline
 - RPC communication protocol on Protocol Buffers over IPC transport
 
-Used:
-- vscode, tslint, eslint, prettier, editorconfig, Perforce, UnrealEngine AutomationTool, ElectricCommander, Sonatype Nexus
-- TypeScript, JavaScript, bash, PowerShell nodejs, git, TAP, Koa, Google Protocol Buffers
+Used: Perforce, UnrealEngine AutomationTool, ElectricCommander, bash, PowerShell, NodeJS, Google Protocol Buffers
 
 #### *Jan-2018 - Dec-2018* | Mobile eCAT development for [Schneider-Electric](https://www.schneider-electric.com)
 Development, support, and design of microservice back-ends for mobile app catalogue with a number of second-party integrations.
 
 Done:
-- adopted code style standard based on standardjs and past experience
-- established missing CI process
-- fixed malfuntioning CD process
-- enforced focuced serivce development (one service per responsibility area)
-- adopted async/await (on generators) technique across services
-- implemented seamless framework for gathering service metrics
-- integrated metrics framework with Telegraf+InfluxDB+Grafana stack dashboard
-- consolidated common utilities across services
-- implemented custom composable asynchronous middleware approach in order to have more controllable and granular endpoint configurations
+- adopted code style standard
+- CI/CD processes review and improvements
+- implemented seamless framework for gathering service metrics, integrated with Telegraf+InfluxDB+Grafana stack
 - coached team members on git basics and js/node suddleties
 - assisted with development of service integration testing framework
-- initiated migration from node6 to node10
-- refactored integration with external catalog service using proper SOAP lib
-- integrated with various external services
-- took significant part in discussion, planning, and estimations  of new features development
-- identified and fixed some security flaws in existing OpenID identity login/refresh implementation
+- OpenID implementation security fixes
 - implemented a tool to automate Kinvey business-logic scripts, collections descriptors, and endpoint configurations deployment and backup
+- lots of refactoring and improvements to microservices approach
 
-Used:
-- MongoDB, InfluxDB
-- atom, kinvey, docker, eslint, prettier, ternjs, editorconfig, Chronograf, pm2, mitmproxy, Grafana
-- JavaScript, nodejs, git, docker, Telegraf, TAP, ssh, SOAP, REST, OpenID, ngnix
+Used: MongoDB, InfluxDB, Progress Kinvey, Docker, Chronograf, Grafana, NodeJS, Telegraf, ngnix, OpenID
 
 #### *Apr-2017 - Oct-2017* | MediaFirst TV platform for [Ericsson](https://www.ericsson.com)
 Development and support of Web-based live and on-demand media delivery platform for phones, tablets, desktops and TVs.
@@ -107,12 +94,9 @@ Development and support of Web-based live and on-demand media delivery platform 
 Done:
 - improved FCM integration, migrated existed implementation to a different data-model
 - performed various critical improvements on application navigation logic
-- continuous application technical debt and sustainability problems analisys through tens of thousands lines of legacy code
-- a lot of overall stability and sustainability fixes, improvements and refactoring of existing application solutions
+- continuous application problems analisys/fixes through tens of thousands lines of legacy code
 
-Used:
-- mitmproxy, gulp, npm, git, atom, Headless Chrome
-- TypeScript, JavaScript, Python, HTML5 canvas, HTML5 history, CSS3, ServiceWorkers, WebSockets, Firebase Cloud Messaging
+Used: Headless Chrome, Python, JS, Firebase Cloud Messaging
 
 ### [Ridero](https://ridero.ru)
 
@@ -120,20 +104,15 @@ Used:
 Development of internal tools for and web admin interface.
 
 Done:
-- performed integration with external web services over HTTPS
-- implemented service responsible for tracking package info and notifying an end-user
-- optimized development and CI/CD process by removing redundant internal packages and migrating the system to a new ones
-- improved system logging and metrics reporting process by configuring and enabling logs and metrics tagging
-- performed research and different tests on available package tracking services in order to optimize the process, system architechure and to minimize company costs
-- implemented integration tests on different system microservice
-- reduced amount of management errors by optimizing a process of creating new orders
-- automated book moderation process by creating managable book queue with different filters and statistics for moderators
-- improved overall UX/UI and system stability through fixing various bugs and implementing miscellaneous features
+- performed integration with external web services
+- performed research on available package tracking services
+- implemented service responsible for tracking package info and notifying end-user
+- optimized development and CI/CD process
+- improved system logging and metrics reporting process
+- various system fixes and improvements
 
 Used:
-- MongoDB, MySQL, Amazon S3
-- Webpack, atom, Grunt, Babel, npm, yarn, git
-- JavaScript, nodejs, Swagger OpenAPI, JSON Schema, Microservice Architectire, React, Redux, KoaJS, ExpressJS, git-flow
+- MongoDB, MySQL, AWS, NodeJS, ReactJS
 
 ### [JetTeam](https://jet.team)
 
@@ -141,53 +120,31 @@ Used:
 Development and deployment of back/front-end.
 
 Done:
-- planned MVP development process and required steps
-- estimated MVP development costs and timing
-- developed project's architechure
-- researched credit-card payment-handling services along with their API and integration plan
-- fully integrated the system with payment-handling service
-- integrated the system with customer's supply process
-- installed and configured HTTPS NGINX server with Google PageSpeed plugin
-- developed custom CMS for the customer's needs
-- researched and integrated with SMS-service
-- implemented SMS-based login system
-- implemented TTL token system used for SMS-login based on MongoDB TTL collection
-- performed manual functional testing of critical parts
-- implemented user-scheduled automated daily orders and corresponding charges
-- basicly developed all of back-end, and almost all of front-end
+- planned MVP development process
+- project's architechure and most of development
+- research on credit-card payment-handling services along with their API and integration plan
 
-Used:
-- MongoDB
-- atom, npm, yarn, git
-- JavaScript, nodejs, Material Design, KnockoutJS, ExpressJS, git-flow, TLS/SSL, nginx
+Used: MongoDB, NodeJS, nginx, KnockoutJS
 
 #### *Apr-2016 - Sep-2016* | UMMC HOLDING. Enterprise resource planning system for budgeting and forecasting
 Help with development.
 
 Done:
-- prototyped and implemented a web-based constructor for presentational slides that supports theming, slide transition animations, different slide layouts, each presentation could be saved into the system and later edited
-- implemented modular reddit-like comments block with real-time updates, likes, dislikes, nested replies
-- performed wrapping of the whole system into a linked containers network
+- prototype and implemention of a web-based slides constructor
+- implemented modular reddit-like comments block with real-time updates
+- wrapped the system into Docker containers and linked them
 - various system improvements
 
-Used:
-- MongoDB, PostgreSQL, Redis
-- atom, npm, gulp, docker-compose, git
-- JavaScript, GitBook, Docker, RevealJS, D3JS, WebSockets, KnockoutJS, RabbitMQ, ngnix
+Used: MongoDB, PostgreSQL, Redis, Docker, RabbitMQ, NodeJS, ngnix, KnockoutJS
 
 #### *Jan-2016 - Apr-2016* | Microsoft. Portal for competition among pupils in the nominations for best mobile app, game, and web-site
 Development and deployment of back/front-end.
 
 Done:
-- integrated the system with Microsoft Azure and Microsoft Account services.
-- implemented the abilities of participants to upload their projects and vote for others.
-- integrated Microsoft analytics into the system.
-- took main role in back-end and front-end development of the project.
+- integration with MS Azure, MS Account services, MS Analytics
+- most of back/front-end development
 
-Used:
-- MSSQL
-- atom, npm, grunt, git
-- JavaScript, Microsoft Azure App Service, Azure BLOB, Azure SQL, Azure Caching, NodeJS, ExpressJS, KnockoutJS
+Used: MSSQL, MS Azure, NodeJS, KnockoutJS
 
 #### *Sep-2014 - Nov-2016* | JetTeam. Various not-so-big projects
 
@@ -199,7 +156,4 @@ Done:
 - update system and various improvements for mobile game Nistagmus (currently removed from store)
 - probably something else I cannot remember
 
-Used:
-- MongoDB, MSSQL, MySQL
-- atom, nodejs, npm, git, docker, apache-cordova
-- JavaScript, ActionScript3, HTML Canvas, KnockoutJS, ExpressJS, ngnix
+Used: MongoDB, MSSQL, MySQL, NodeJS, ActionScript3, ngnix, KnockoutJS
