@@ -1,5 +1,5 @@
 ## Ilia Baryshnikov
-I do software things
+Software Engineer and whatnot
 
 ## Contents
 - [Contents](#contents)
