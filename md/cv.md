@@ -38,7 +38,7 @@ Open for remote/relocation/local opportunities
 
 ### [Ural Federal University](https://urfu.ru/en/)
 
-#### *2012 — 2016* | Bachelor of Sciense in Applied Informatics, institute of Mathematics and Computer Science
+#### *2012 — 2016* | Bachelor of Science in Applied Informatics, institute of Mathematics and Computer Science
 
 ## Employments
 
@@ -52,7 +52,7 @@ Design, development, and maintenance of new and existing solutions for sports da
 - help with design and implementation of live-updates system for user-facing polls
 - help with cluster migration over to AWS EKS using Terraform
 - initiaied migration onto TypeScript and better types culture
-- system architechture review and a techical proposal for reducing coupling
+- system architechture review and a technical proposal for reducing coupling
 - various fixes and improvements
 
 **Used**: Docker, bash, NodeJS, AWS, Terraform, Redis, PostgreSQL, TypeScript, Kubernetes
