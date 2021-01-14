@@ -13,7 +13,7 @@ const toggle = () => {
     isDark = !isDark
 }
 button.onclick = toggle
-Object.assign(button.style.ba, {
+Object.assign(button.style, {
     cursor: 'pointer',
     border: 'none',
     backgroundColor: 'inherit',
