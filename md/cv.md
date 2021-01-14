@@ -54,7 +54,7 @@ Design, development, and maintenance of new and existing solutions for sports da
 - system architechture review and a techical proposal for reducing coupling
 - various fixes and improvements
 
-**Used**: Docker, bash, NodeJS, AWS, Terraform
+**Used**: Docker, bash, NodeJS, AWS, Terraform, Redis, PostgreSQL
 
 ### [EPAM Systems](https://www.epam.com)
 
