@@ -43,5 +43,8 @@ body {
 header {
     display: flex;
     place-content: space-between;
-    flex-direction: row-reverse;
+}
+
+nav > *+* {
+    padding-left: 2em;
 }
