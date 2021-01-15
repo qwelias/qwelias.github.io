@@ -19,5 +19,5 @@ Object.assign(button.style, {
     backgroundColor: 'inherit',
 })
 
-document.querySelector('header').append(button)
 toggle()
+document.querySelector('header').append(button)
