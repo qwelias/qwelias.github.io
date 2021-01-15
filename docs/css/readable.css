@@ -25,6 +25,7 @@ body {
 header {
     display: flex;
     place-content: space-between;
+    margin-bottom: 1em;
 }
 
 nav > *+* {
