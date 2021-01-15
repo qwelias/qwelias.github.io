@@ -22,13 +22,16 @@ self.addEventListener('activate', (/** @type {ExtendableEvent} */event) => {
 })
 
 self.addEventListener('fetch', (/** @type {FetchEvent} */event) =>
-    event.waitUntil(caches.open(cacheName).then(async cache => {
-        const res = await cache.match(event.request)
+    event.respondWith(caches.open(cacheName).then(async cache => {
+        const [res, preload] = await Promise.all([
+            cache.match(event.request),
+            event.preloadResponse,
+        ])
         const rres = fetch(event.request).then(res => {
             cache.put(event.request, res.clone())
             return res
         })
 
-        event.respondWith(res || await rres.catch(() => cache.match('/offline.html')))
+        return res || preload || await rres.catch(() => cache.match('/offline.html'))
     })),
 )
