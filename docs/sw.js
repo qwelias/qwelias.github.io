@@ -1,21 +1,23 @@
-/* global globalThis */
-const { addEventListener, fetch, caches } = globalThis
+/* eslint-env serviceworker */
 
-addEventListener('install', event => {
+self.addEventListener('install', (/** @type {ExtendableEvent} */event) =>
     event.waitUntil(
-        caches.open('swr').then(cache => {
+        caches.open('all').then(cache => {
             return cache.addAll([
                 '/offline.html',
             ])
         }),
-    )
-})
+    ),
+)
 
-addEventListener('fetch', event => event.respondWith(caches.open('swr').then(async cache => {
-    const cacheRes = cache.match(event.request)
-    const newRes = fetch(event.request).then(res => {
-        cache.put(event.request, res.clone())
-        return res
-    }).catch(reason => caches.match('/offline.html'))
-    return cacheRes || newRes
-})))
+self.addEventListener('fetch', (/** @type {FetchEvent} */event) =>
+    event.waitUntil(caches.open('swr').then(async cache => {
+        const res = cache.match(event.request)
+        const rres = fetch(event.request).then(res => {
+            cache.put(event.request, res.clone())
+            return res
+        })
+
+        event.respondWith(res || rres.catch(() => cache.match('/offline.html')))
+    })),
+)
