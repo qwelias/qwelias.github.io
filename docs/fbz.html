@@ -1,49 +1,52 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>( ͡° ͜ʖ ͡°)</title>
-    <meta name=viewport content="width=device-width, initial-scale=1">
-    <link media=screen href=/css/readable.css rel=stylesheet />
-    <link media=print href=/css/print.css rel=stylesheet />
-    <script type=module src=/js/dark-toggle.js></script>
-    <script type=module src=/js/sw-register.js></script>
-  </head>
-  <body>
-    <header>
-        <nav>
-            <a href=/ >home</a>
-            <a href=https://github.com/qwelias>github</a>
-        </nav>
-    </header>
-    <form>
-      <input type=password required>
-      <button>( ͡° ͜ʖ ͡°)</button>
-    </form>
-    <script>
-      'use strict';
+    <head>
+        <title>( ͡° ͜ʖ ͡°)</title>
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <link media=screen href=/css/readable.css rel=stylesheet />
+        <link media=print href=/css/print.css rel=stylesheet />
+        <script type=module src=/js/dark-toggle.js></script>
+        <script type=module src=/js/sw-register.js></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href=/ >home</a>
+                <a href=https://github.com/qwelias>github</a>
+            </nav>
+        </header>
+        <form>
+            <input type=password required>
+            <button>( ͡° ͜ʖ ͡°)</button>
+        </form>
+        <script>
+            'use strict';
 
-      setTimeout(() => document.querySelector('input').focus(), 1000) // just attribute doesn't work
+            document.addEventListener('click', () => {
+                // mobile kb
+                document.querySelector('input').focus()
+            })
 
-      const a = [100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 33, 35, 36, 37, 38, 42, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 94, 97, 98, 99];
-      const foo = str => BigInt([...str].map(c => c.charCodeAt()).join(''));
-      const bar = strs => strs.reduce((h, s, p) => h + foo(s) ** BigInt(strs.length - p + 1), 0n);
-      const baz = ins => {
-          const h = [...bar(ins.map(String)).toString()];
-          let r = '';
-          while (h.length) {
-              const n = Number(h.splice(0, 2).join(''));
-              r += String.fromCharCode(a[n % a.length]);
-          }
-          return r;
-      };
+            const a = [100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 33, 35, 36, 37, 38, 42, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 94, 97, 98, 99];
+            const foo = str => BigInt([...str].map(c => c.charCodeAt()).join(''));
+            const bar = strs => strs.reduce((h, s, p) => h + foo(s) ** BigInt(strs.length - p + 1), 0n);
+            const baz = ins => {
+                const h = [...bar(ins.map(String)).toString()];
+                let r = '';
+                while (h.length) {
+                    const n = Number(h.splice(0, 2).join(''));
+                    r += String.fromCharCode(a[n % a.length]);
+                }
+                return r;
+            };
 
-      document.querySelector('form').addEventListener('submit', e => {
-        e.preventDefault();
+            document.querySelector('form').addEventListener('submit', e => {
+                e.preventDefault();
 
-        const inp = e.target.elements[0];
-        navigator.clipboard.writeText(baz(inp.value.split(' ')));
-        inp.value = '';
-      }, true);
-    </script>
-  </body>
+                const inp = e.target.elements[0];
+                navigator.clipboard.writeText(baz(inp.value.split(' ')));
+                inp.value = '';
+            }, true);
+        </script>
+    </body>
 </html>
