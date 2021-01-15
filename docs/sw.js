@@ -12,12 +12,12 @@ self.addEventListener('install', (/** @type {ExtendableEvent} */event) =>
 
 self.addEventListener('fetch', (/** @type {FetchEvent} */event) =>
     event.waitUntil(caches.open('swr').then(async cache => {
-        const res = cache.match(event.request)
+        const res = await cache.match(event.request)
         const rres = fetch(event.request).then(res => {
             cache.put(event.request, res.clone())
             return res
         })
 
-        event.respondWith(res || rres.catch(() => cache.match('/offline.html')))
+        event.respondWith(res || await rres.catch(() => cache.match('/offline.html')))
     })),
 )
