@@ -55,7 +55,7 @@ Design, development, and maintenance of new and existing solutions for sports da
 - system architechture review and a technical proposal for reducing coupling
 - various fixes and improvements
 
-**Used**: Docker, bash, NodeJS, AWS, Terraform, Redis, PostgreSQL, TypeScript, Kubernetes
+**Used**: Docker, bash, NodeJS, AWS, Terraform, Redis, PostgreSQL, TypeScript, Kubernetes, Jenkins
 
 ### [EPAM Systems](https://www.epam.com)
 
@@ -113,7 +113,7 @@ Development of internal tools for and web admin interface.
 - improved system logging and metrics reporting process
 - various system fixes and improvements
 
-**Used**: MongoDB, MySQL, AWS, NodeJS, ReactJS, Kubernetes, InfluxDB
+**Used**: MongoDB, MySQL, AWS, NodeJS, ReactJS, Kubernetes, InfluxDB, Jenkins
 
 ### [JetTeam](https://jet.team)
 
