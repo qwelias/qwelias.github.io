@@ -1,8 +1,11 @@
-/* eslint-env serviceworker */
+/* eslint-env serviceworker, es2020 */
+
+/** @type {ServiceWorkerGlobalScope} */
+const sw = globalThis
 
 const cacheName = 'all'
 
-self.addEventListener('install', (/** @type {ExtendableEvent} */event) =>
+sw.addEventListener('install', (/** @type {ExtendableEvent} */event) =>
     event.waitUntil(
         caches.open(cacheName).then(cache => {
             return cache.addAll([
@@ -12,26 +15,24 @@ self.addEventListener('install', (/** @type {ExtendableEvent} */event) =>
     ),
 )
 
-self.addEventListener('activate', (/** @type {ExtendableEvent} */event) => {
-    event.waitUntil(caches.keys().then((names) => {
-        return Promise.all(names.map((name) => {
-            if (name === cacheName) return
-            return caches.delete(name)
-        }))
-    }))
+sw.addEventListener('activate', (/** @type {ExtendableEvent} */event) => {
+    event.waitUntil(Promise.all([
+        caches.keys().then((names) => {
+            return Promise.all(names.map((name) => {
+                if (name === cacheName) return
+                return caches.delete(name)
+            }))
+        }),
+        sw.registration.navigationPreload ? self.registration.navigationPreload.enable() : null,
+    ]))
 })
 
 self.addEventListener('fetch', (/** @type {FetchEvent} */event) =>
     event.respondWith(caches.open(cacheName).then(async cache => {
-        const [res, preload] = await Promise.all([
-            cache.match(event.request),
-            event.preloadResponse,
-        ])
-        const rres = fetch(event.request).then(res => {
-            cache.put(event.request, res.clone())
-            return res
-        })
+        const res = await event.preloadResponse || await fetch(event.request).catch(() => null)
+        if (!res) return await cache.match(event.request) || cache.match('/offline.html')
 
-        return res || preload || await rres.catch(() => cache.match('/offline.html'))
+        cache.put(event.request, res)
+        return res
     })),
 )
