@@ -32,7 +32,7 @@ self.addEventListener('fetch', (/** @type {FetchEvent} */event) =>
         const res = await event.preloadResponse || await fetch(event.request).catch(() => null)
         if (!res) return await cache.match(event.request) || cache.match('/offline.html')
 
-        cache.put(event.request, res)
+        cache.put(event.request, res.clone())
         return res
     })),
 )
