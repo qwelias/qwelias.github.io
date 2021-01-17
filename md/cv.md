@@ -51,8 +51,8 @@ Design, development, and maintenance of new and existing solutions for sports da
 - design and implementation of service integration tests framework and environment
 - help with design and implementation of live-updates system for user-facing polls
 - help with cluster migration over to AWS EKS using Terraform
-- initiaied migration onto TypeScript and better types culture
-- system architechture review and a technical proposal for reducing coupling
+- initiated migration onto TypeScript and better types culture
+- system architecture review and a technical proposal for reducing coupling
 - various fixes and improvements
 
 **Used**: Docker, bash, NodeJS, AWS, Terraform, Redis, PostgreSQL, TypeScript, Kubernetes, Jenkins
@@ -82,7 +82,7 @@ Development, support, and design of microservice back-ends for mobile app catalo
 - adopted code style standard
 - CI/CD processes review and improvements
 - implemented seamless framework for gathering service metrics, integrated with Telegraf+InfluxDB+Grafana stack
-- coached team members on git basics and js/node suddleties
+- coached team members on git basics and js/node subtleties
 - assisted with development of service integration testing framework
 - OpenID implementation security fixes
 - implemented a tool to automate Kinvey business-logic scripts, collections descriptors, and endpoint configurations deployment and backup
@@ -96,7 +96,7 @@ Development and support of Web-based live and on-demand media delivery platform 
 **Done**:
 - improved FCM integration, migrated existed implementation to a different data-model
 - performed various critical improvements on application navigation logic
-- continuous application problems analisys/fixes through tens of thousands lines of legacy code
+- continuous application problems analysis/fixes through tens of thousands lines of legacy code
 
 **Used**: Headless Chrome, Python, JS, Firebase Cloud Messaging
 
@@ -131,7 +131,7 @@ Development and deployment of back/front-end.
 Help with development.
 
 **Done**:
-- prototype and implemention of a web-based slides constructor
+- prototype and implementation of a web-based slides constructor
 - implemented modular reddit-like comments block with real-time updates
 - wrapped the system into Docker containers and linked them
 - various system improvements
