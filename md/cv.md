@@ -122,7 +122,7 @@ Development and deployment of back/front-end.
 
 **Done**:
 - planned MVP development process
-- project's architechure and most of development
+- project's architecture and most of development
 - research on credit-card payment-handling services along with their API and integration plan
 
 **Used**: MongoDB, NodeJS, nginx, KnockoutJS
