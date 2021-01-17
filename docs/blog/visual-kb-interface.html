@@ -4,8 +4,11 @@
     <head>
         <title>visual-kb-interface</title>
         <meta name=viewport content="width=device-width, initial-scale=1">
-        <link media=screen href=/css/readable.css rel=stylesheet />
-        <link media=print href=/css/print.css rel=stylesheet />
+        <link rel=stylesheet href=//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.css>
+        <link rel=stylesheet media=print href=/css/print.css>
+        <link rel=stylesheet media=screen href=/css/screen.css>
+        <link rel=stylesheet href=/css/readable.css>
+        <link rel=stylesheet href=//cdn.jsdelivr.net/highlight.js/9.1.0/styles/github.min.css>
         <script type=module src=/js/dark-toggle.js></script>
         <script type=module src=/js/sw-register.js></script>
     </head>
@@ -42,9 +45,9 @@
 </li>
 </ol>
 <p>While first type is very easy to start with many would say that it becomes a bottleneck in terms of performance once you know very well what you want to do.</p>
-<p>In an ideal world I'd like to have a performance of keyboard-based interface with low learning curve of and intuitiveness of mouse/touch interface. Sound like it's impossible and it probably is unless we can upload all keyboard shortcuts straight into the brain matrix-style, but at that point we'd probably already have a neural interface, so...</p>
+<p>In an ideal world I'd like to have a performance of keyboard-based interface with low learning curve and intuitiveness of mouse/touch interface. Sounds like it's impossible and it probably is unless we can upload all keyboard shortcuts straight into the brain Matrix-style, but at that point we'd probably already have a neural interface, so...</p>
 <h2 id="enter-my-imagination">Enter my iMaGiNaTiOn</h2>
-<p>Remember how apple made a touch display bar above the keyboard? Yeah.</p>
+<p>Remember how Apple made a touch display bar above the keyboard? Yeah.</p>
 <p>Here's some ideas based on that in the order of ridiculouseness:</p>
 <ol>
 <li>Use it to display some useful information about kb shortcuts based on the app in-focus. What is useful information you ask? Well idk, probably depends on the app and have to be provided by developers, but maybe:
@@ -59,7 +62,7 @@
 </li>
 </ul>
 </li>
-<li>Make all keyboard keys touch sensitive (lol)! So when you just touch a key or a combination of keys it will:
+<li>Make all keyboard keys touch sensitive (lol)! So when you just touch a key or a combination of keys the display bar will:
 <ul>
 <li>display info about what the key or a combo would do</li>
 <li>display info about shortcuts that could be combined using the key(s), e.g.:
@@ -77,18 +80,16 @@
 </li>
 </ol>
 <p>Of course nothing of that would work out of the box, some of it could be done using man pages or existing autosuggest scripts for cli tools, but for the most part it'd require developers to provide this functionality, especially if it's based on current activity.</p>
-<h3 id="disclaimer">Disclaimer</h3>
-<p>Yes, those examples with copy-pase are basic and everyone is already familiar with, that's for illustration purposes, not a go-to.</p>
 <h2 id="welp%2C-nice-try">Welp, nice try</h2>
 <p>So in order to implement something like this into the real world we need:</p>
 <ul>
-<li>mass market users that want to start using keyboard more</li>
+<li>mass market users that want to start using keyboard shortcuts more</li>
 <li>someone big to drive it</li>
 <li>hardware support</li>
 <li>OS support</li>
-<li>Software support</li>
+<li>software support</li>
 </ul>
-<p><em>Highly unlikely if you ask me, so go back to memorizing those shortcuts or clicking your mouse</em></p>
+<p><em>Highly unlikely to happen if you ask me, so go back to memorizing those shortcuts or clicking your mouse :)</em></p>
 
         </main>
     </body>

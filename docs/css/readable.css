@@ -1,40 +1,11 @@
-:root {
-    --invert: 0;
-    --sepia: 0.1;
-}
-
 html {
-    display: flex;
-    place-content: center;
-    filter: sepia(var(--sepia)) invert(var(--invert));
-    background-color: #dfdfdf;
-    color: #111;
-    min-height: 100%;
-}
-
-body {
-    padding: 1em 1.5em;
-    flex-basis: 100%;
-    margin: 0;
-    max-width: 50em;
-    font-family: monospace;
-    background-color: #eee;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 0.1em 0.4em;
-}
-
-header {
-    display: flex;
-    place-content: space-between;
-    margin-bottom: 1em;
-}
-
-nav > *+* {
-    margin-left: 2em;
+    font-family: Hack, monospace;
 }
 
 code {
-    background-color: #ddd;
-    padding: 0.1em;
-    border: grey solid 1px;
-    border-radius: 4px;
+    font-family: Hack, monospace;
+    background-color: #cacaca;
+    border-radius: 3px;
+    padding: 0 3px;
+    font-size: 0.9em;
 }
