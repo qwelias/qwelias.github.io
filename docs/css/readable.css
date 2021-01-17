@@ -31,3 +31,10 @@ header {
 nav > *+* {
     margin-left: 2em;
 }
+
+code {
+    background-color: #ddd;
+    padding: 0.1em;
+    border: grey solid 1px;
+    border-radius: 4px;
+}
