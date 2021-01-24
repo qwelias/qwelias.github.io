@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>index</title>
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <link rel=stylesheet href=//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.css>
+        <link rel=stylesheet media=print href=/css/print.css>
+        <link rel=stylesheet media=screen href=/css/screen.css>
+        <link rel=stylesheet href=/css/readable.css>
+        <link rel=stylesheet href=//cdn.jsdelivr.net/highlight.js/9.1.0/styles/github.min.css>
+        <script type=module src=/js/dark-toggle.js></script>
+        <script type=module src=/js/sw-register.js></script>
+        <style>
+            section {
+                display: flex;
+                flex-wrap: wrap;
+                place-content: space-between;
+            }
+            div {
+                flex-basis: 45%;
+                margin: 1em 0;
+            }
+            label {
+                margin: 0.3em 0;
+                display: flex;
+                flex-wrap: wrap;
+                place-content: space-between;
+                border-bottom: 1px dotted;
+            }
+            input {
+                width: 9em;
+                border: none;
+                background-color: inherit;
+                border-bottom: 1px solid;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href=/ >home</a>
+                <a href=https://github.com/qwelias/qwelias.github.io>source</a>
+            </nav>
+            <nav>
+                <a href=https://github.com/qwelias>github</a>
+            </nav>
+        </header>
+        <main>
+            <h2 id=result>damage calc</h2>
+            <form id=calc>
+                <section>
+                    <div>
+                        <label>units
+                            <input id=units type=number min=1 step=1 value=1>
+                        </label>
+                        <label>min dmg
+                            <input id=minDmg type=number min=1 step=1 value=1>
+                        </label>
+                        <label>max dmg
+                            <input id=maxDmg type=number min=1 step=1 value=1>
+                        </label>
+                        <label>attack
+                            <input id=attack type=number min=0 step=1 value=0>
+                        </label>
+                        <label>offence
+                            <input id=offence type=range min=0 max=3 step=1 value=0>
+                        </label>
+                        <label>archery
+                            <input id=archery type=range min=0 max=3 step=1 value=0>
+                        </label>
+                    </div>
+                    <div>
+                        <label>defence
+                            <input id=defence type=number min=0 step=1 value=0>
+                        </label>
+                        <label>armorer
+                            <input id=armorer type=range min=0 max=3 step=1 value=0>
+                        </label>
+                        <label>shield
+                            <input id=shield type=range min=0 max=2 step=1 value=0>
+                        </label>
+                        <label>stone skin
+                            <input id=stoneSkin type=range min=0 max=2 step=1 value=0>
+                        </label>
+                    </div>
+                </section>
+                <button type=submit>submit</button>
+            </form>
+        </main>
+    </body>
+    <script>
+        calc.onsubmit = ev => {
+            ev.preventDefault()
+            let multp = 100
+
+            const adiff = attack.value - defence.value - stoneSkin.value*3
+            if (adiff < 0) multp -= 3*adiff
+            else multp += 5*adiff
+
+            multp += offence.value*10
+            multp += [0, 10, 25, 50][archery.value]
+
+            multp -= armorer.value*5
+            multp -= shield.value*15
+
+            result.innerText = [minDmg, maxDmg].map(({ value }) => {
+                return value*units.value*multp/100|0
+            }).join(' — ')
+        }
+    </script>
+</html>
