@@ -94,7 +94,7 @@
             let multp = 100
 
             const adiff = attack.valueAsNumber - defence.valueAsNumber - stoneSkin.valueAsNumber*3
-            multp += adiff < 0 ? 3*adiff : 5*adiff
+            multp += adiff < 0 ? 2.5*adiff : 5*adiff
 
             multp += offence.valueAsNumber*10
             multp += [0, 10, 25, 50][archery.valueAsNumber]
@@ -102,8 +102,8 @@
             multp -= armorer.valueAsNumber*5
             multp -= shield.valueAsNumber*15
 
-            result.innerText = [minDmg, maxDmg].map(({ value }) => {
-                return value*units.valueAsNumber*multp/100|0
+            result.innerText = [minDmg, maxDmg].map(({ valueAsNumber: dmg }) => {
+                return Math.min(dmg*units.valueAsNumber*multp/100|0, 0)
             }).join(' — ')
         }
     </script>
