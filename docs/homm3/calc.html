@@ -94,8 +94,7 @@
             let multp = 100
 
             const adiff = attack.valueAsNumber - defence.valueAsNumber - stoneSkin.valueAsNumber*3
-            if (adiff < 0) multp -= 3*adiff
-            else multp += 5*adiff
+            multp += adiff < 0 ? 3*adiff : 5*adiff
 
             multp += offence.valueAsNumber*10
             multp += [0, 10, 25, 50][archery.valueAsNumber]
