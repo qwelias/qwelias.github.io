@@ -93,18 +93,18 @@
             ev.preventDefault()
             let multp = 100
 
-            const adiff = attack.value - defence.value - stoneSkin.value*3
+            const adiff = attack.valueAsNumber - defence.valueAsNumber - stoneSkin.valueAsNumber*3
             if (adiff < 0) multp -= 3*adiff
             else multp += 5*adiff
 
-            multp += offence.value*10
-            multp += [0, 10, 25, 50][archery.value]
+            multp += offence.valueAsNumber*10
+            multp += [0, 10, 25, 50][archery.valueAsNumber]
 
-            multp -= armorer.value*5
-            multp -= shield.value*15
+            multp -= armorer.valueAsNumber*5
+            multp -= shield.valueAsNumber*15
 
             result.innerText = [minDmg, maxDmg].map(({ value }) => {
-                return value*units.value*multp/100|0
+                return value*units.valueAsNumber*multp/100|0
             }).join(' — ')
         }
     </script>
