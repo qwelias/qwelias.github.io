@@ -103,7 +103,7 @@
             multp -= shield.valueAsNumber*15
 
             result.innerText = [minDmg, maxDmg].map(({ valueAsNumber: dmg }) => {
-                return Math.min(dmg*units.valueAsNumber*multp/100|0, 0)
+                return Math.max(dmg*units.valueAsNumber*multp/100|0, 0)
             }).join(' — ')
         }
     </script>
