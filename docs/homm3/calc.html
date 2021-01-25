@@ -137,8 +137,10 @@
             switch (input?.id) {
             case 'minDmg':
                 maxDmg.valueAsNumber = Math.max(maxDmg.valueAsNumber, minDmg.valueAsNumber)
+                break
             case 'maxDmg':
                 minDmg.valueAsNumber = Math.min(maxDmg.valueAsNumber, minDmg.valueAsNumber)
+                break
             case 'archery':
             case 'airShield':
                 offence.valueAsNumber = 0
