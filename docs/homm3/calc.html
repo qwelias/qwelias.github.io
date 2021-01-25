@@ -135,6 +135,10 @@
 
         const toggleExcludes = input => {
             switch (input?.id) {
+            case 'minDmg':
+                maxDmg.valueAsNumber = Math.max(maxDmg.valueAsNumber, minDmg.valueAsNumber)
+            case 'maxDmg':
+                minDmg.valueAsNumber = Math.min(maxDmg.valueAsNumber, minDmg.valueAsNumber)
             case 'archery':
             case 'airShield':
                 offence.valueAsNumber = 0
