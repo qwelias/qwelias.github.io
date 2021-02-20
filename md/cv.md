@@ -28,11 +28,11 @@ Currently live in Oslo, Norway
 Open for remote/relocation/local opportunities
 
 ## Summary
-- JavaScript engineer since ~September 2014
+- Full stack engineer since ~September 2014
 - Linux all the way
-- used to do front-end, not so much lately
-- mostly do back-end in NodeJS, lots of experience there
-- not shy of DevOps related work
+- Mostly do NodeJS-related engineering
+- Plus lots of adjacent infra/DevOps and DataBase engineering
+- Can work with almost anything as long as it runs on Linux and is not lost to time
 
 ## Education
 
