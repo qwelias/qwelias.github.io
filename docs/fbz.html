@@ -34,8 +34,12 @@
             <input type=password required>
             <button>( ͡° ͜ʖ ͡°)</button>
         </form>
+        <form>
+            <input type=password required>
+            <button>( ͡° ͜ʖ ͡°)</button>
+        </form>
         <script>
-            'use strict';
+            'use strict'
 
             document.addEventListener('click', ev => {
                 if (ev.target.tagName === 'INPUT') return
@@ -43,26 +47,31 @@
                 document.querySelector('input').focus()
             })
 
-            const makeFbz = (a, l = 13*2) => {
+            const makeFbz = (a, l = 13*2, pr = '', po = '') => {
                 const foo = str => BigInt([...str].map(c => c.charCodeAt()).join(''))
                 const bar = strs => strs.reduce((h, s, p) => h + foo(s) ** BigInt(strs.length - p + 1), 0n)
                 const baz = ins => {
                     let h = String(bar(ins.map(String)))
                     while (h.length > l) h = String(BigInt(h.slice(0, l)) ^ BigInt(h.slice(l)))
 
-                    const hh = [...h];
-                    let r = '';
+                    const hh = [...h]
+                    let r = ''
                     while (hh.length) {
-                        const n = Number(hh.splice(0, 2).join(''));
-                        r += String.fromCharCode(a[n % a.length]);
+                        const n = Number(hh.splice(0, 2).join(''))
+                        r += String.fromCharCode(a[n % a.length])
                     }
-                    return r;
+                    return r
                 }
 
-                return i => baz(i.split(' '))
+                return i => pr + baz(i.split(' ')) + po
             }
 
             const a = [
+                [
+                    [45, 46, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 63, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 95, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122],
+                    18*2,
+                    '_'
+                ],
                 [
                     [33, 36, 38, 42, 43, 45, 46, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 95, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122],
                     18*2,
@@ -81,12 +90,12 @@
                 const fbz = makeFbz(...a[i])
 
                 form.addEventListener('submit', e => {
-                    e.preventDefault();
+                    e.preventDefault()
 
-                    const inp = e.target.elements[0];
-                    navigator.clipboard.writeText(fbz(inp.value));
-                    inp.value = '';
-                }, true);
+                    const inp = e.target.elements[0]
+                    navigator.clipboard.writeText(fbz(inp.value))
+                    inp.value = ''
+                }, true)
             })
         </script>
     </body>
