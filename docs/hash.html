@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>hash</title>
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <link rel=stylesheet href=//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.css>
+        <link rel=stylesheet media=print href=/css/print.css>
+        <link rel=stylesheet media=screen href=/css/screen.css>
+        <link rel=stylesheet href=/css/readable.css>
+        <link rel=stylesheet href=//cdn.jsdelivr.net/highlight.js/9.1.0/styles/github.min.css>
+        <script type=module src=/js/dark-toggle.js></script>
+        <script type=module src=/js/sw-register.js></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href=/ >home</a>
+                <a href=https://github.com/qwelias/qwelias.github.io>source</a>
+            </nav>
+            <nav>
+                <a href=https://github.com/qwelias>github</a>
+            </nav>
+        </header>
+        <form>
+            <input type=password required autofocus>
+            <button>hash</button>
+        </form>
+        <script>
+            'use strict'
+
+            document.addEventListener('click', ev => {
+                if (ev.target.tagName === 'INPUT') return
+                // mobile kb
+                document.querySelector('input').focus()
+            })
+
+            const digestBI = async str => {
+                const hashBuffer = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str))
+                const hashArray = Array.from(new Uint8Array(hashBuffer))
+                const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('')
+                return BigInt(`0x${hashHex}`)
+            }
+
+            const a = [48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122]
+            const l = 18*2
+            const makeHash = async i => {
+                const bis = await Promise.all(i.split(' ').map(digestBI))
+                let nh = String(bis.reduce((h, n) => n^h))
+                while (nh.length > l) nh = String(BigInt(nh.slice(0, l)) ^ BigInt(nh.slice(l).padEnd(l, nh.slice(l))))
+
+                const hh = [...nh]
+                let r = ''
+                while (hh.length) {
+                    const n = Number(hh.splice(0, 2).join(''))
+                    r += String.fromCharCode(a[n % a.length])
+                }
+                return r
+            }
+
+            const form = document.querySelector('form')
+            form.addEventListener('submit', async e => {
+                e.preventDefault()
+
+                const inp = e.target.querySelector('input')
+                const hash = await makeHash(inp.value)
+                navigator.clipboard.writeText(hash)
+                inp.value = ''
+            }, true)
+        </script>
+    </body>
+</html>
