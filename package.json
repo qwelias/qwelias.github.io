@@ -2,7 +2,8 @@
   "name": "qwelias.github.io",
   "version": "1.0.0",
   "scripts": {
-    "build": "ts-node build"
+    "build": "ts-node build",
+    "serve": "http-server docs"
   },
   "repository": {
     "type": "git",

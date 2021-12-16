@@ -1,0 +1,43 @@
+
+.red {
+    color: red;
+}
+.black {
+    color: black;
+}
+main {
+    display: flex;
+    flex-direction: column;
+}
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 10vw;
+    max-height: 5em;
+    margin-bottom: 1em;
+}
+div {
+    width: 22%;
+    height: 100%;
+    background-color: transparent;
+}
+label {
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 0.4rem;
+    background-color: white;
+    font-size: min(16vw, 4rem);
+    height: 100%;
+    line-height: 87%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+input:checked + label {
+    opacity: 0.15;
+    box-shadow: none;
+}
+A
