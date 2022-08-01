@@ -30,9 +30,13 @@ Open for remote/relocation/local opportunities
 ## Summary
 - Full stack engineer since ~September 2014
 - Linux all the way
-- Mostly do NodeJS-related engineering
-- Plus lots of adjacent infra/DevOps and DataBase engineering
+- Mostly do NodeJS-related things
+- Plus lots of adjacent infra/DevOps and DataBase things
 - Can work with almost anything as long as it runs on Linux and is not lost to time
+- Occasionally contribute to OSS:
+  - [merged PRs](https://github.com/pulls?q=is%3Apr+author%3Aqwelias+is%3Amerged)
+  - some random personal projects in [my GH](https://github.com/qwelias?tab=repositories)
+    - most up-to-date one is [setch](https://setch.qwelias.me/)
 
 ## Education
 
@@ -44,7 +48,24 @@ Open for remote/relocation/local opportunities
 
 ### [Schibsted](https://schibsted.com/about/)
 
-#### *Feb-2020 — now* | Sports API, [vglive.no](https://vglive.no), [malservice.aftonbladet.se](https://malservice.aftonbladet.se)
+#### *Sep 2021 — now* | [zoopit.no](zoopit.no)
+**Responsibility**
+
+Technical leadership, mentoring, system reliability, architechture, feature design.
+
+**Done**:
+- stabilized system availability
+- standardized logging/monitoring
+- standardized integration testing
+- standardized code documentation/sharing
+- standardized CI, consolidated depoyment configurations
+- various fixes big and small
+
+**Used**: Docker, bash, NodeJS, MongoDB, TypeScript, Python, OSRM, Vroom
+
+#### *Feb-2020 — Sep 2021* | Sports API, [vglive.no](https://vglive.no), [malservice.aftonbladet.se](https://malservice.aftonbladet.se)
+**Responsibility**
+
 Design, development, and maintenance of new and existing solutions for sports data aggregation and delivery pipeline.
 
 **Done**:
@@ -60,6 +81,8 @@ Design, development, and maintenance of new and existing solutions for sports da
 ### [EPAM Systems](https://www.epam.com)
 
 #### *Jan-2019 — Jan-2020* | Launcher Daemon for [Epic Games](https://www.epicgames.com)
+**Responsibility**
+
 Design and implementation of headless client-side OS (Win, Mac) service for handling communications.
 
 **Done**:
@@ -76,6 +99,8 @@ Design and implementation of headless client-side OS (Win, Mac) service for hand
 **Used**: Perforce, UnrealEngine AutomationTool, ElectricCommander, bash, PowerShell, NodeJS, Google Protocol Buffers, TypeScript
 
 #### *Jan-2018 — Dec-2018* | Mobile eCAT development for [Schneider-Electric](https://www.schneider-electric.com)
+**Responsibility**
+
 Development, support, and design of microservice back-ends for mobile app catalogue with a number of second-party integrations.
 
 **Done**:
@@ -91,6 +116,8 @@ Development, support, and design of microservice back-ends for mobile app catalo
 **Used**: MongoDB, InfluxDB, Progress Kinvey, Docker, Chronograf, Grafana, NodeJS, Telegraf, ngnix, OpenID
 
 #### *Apr-2017 — Oct-2017* | MediaFirst TV platform for [Ericsson](https://www.ericsson.com)
+**Responsibility**
+
 Development and support of Web-based live and on-demand media delivery platform for phones, tablets, desktops and TVs.
 
 **Done**:
@@ -103,6 +130,8 @@ Development and support of Web-based live and on-demand media delivery platform 
 ### [Ridero](https://ridero.ru)
 
 #### *Nov-2016 — Mar-2017* | Smart publishing system for everyone to create professional quality books
+**Responsibility**
+
 Development of internal tools for and web admin interface.
 
 **Done**:
@@ -118,6 +147,8 @@ Development of internal tools for and web admin interface.
 ### [JetTeam](https://jet.team)
 
 #### *Jul-2016 — Nov-2016* | Talmoloko. Daily delivery of dairy products
+**Responsibility**
+
 Development and deployment of back/front-end.
 
 **Done**:
@@ -128,6 +159,8 @@ Development and deployment of back/front-end.
 **Used**: MongoDB, NodeJS, nginx, KnockoutJS
 
 #### *Apr-2016 — Sep-2016* | UMMC HOLDING. Enterprise resource planning system for budgeting and forecasting
+**Responsibility**
+
 Help with development.
 
 **Done**:
@@ -139,6 +172,8 @@ Help with development.
 **Used**: MongoDB, PostgreSQL, Redis, Docker, RabbitMQ, NodeJS, ngnix, KnockoutJS
 
 #### *Jan-2016 — Apr-2016* | Microsoft. Portal for competition among pupils in the nominations for best mobile app, game, and web-site
+**Responsibility**
+
 Development and deployment of back/front-end.
 
 **Done**:

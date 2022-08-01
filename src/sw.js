@@ -1,5 +1,3 @@
-/* eslint-env serviceworker, es2020 */
-
 /** @type {ServiceWorkerGlobalScope} */
 const sw = globalThis
 
