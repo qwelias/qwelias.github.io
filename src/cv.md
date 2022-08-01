@@ -51,7 +51,7 @@ Open for remote/relocation/local opportunities
 #### *Sep 2021 — now* | [zoopit.no](https://zoopit.no)
 **Responsibility**
 
-Technical leadership, mentoring, system reliability, architechture, feature design.
+Technical leadership, mentoring, technical interviews, system reliability, architechture, feature design.
 
 **Done**:
 - stabilized system availability
