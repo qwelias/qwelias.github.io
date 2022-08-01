@@ -48,7 +48,7 @@ Open for remote/relocation/local opportunities
 
 ### [Schibsted](https://schibsted.com/about/)
 
-#### *Sep 2021 — now* | [zoopit.no](zoopit.no)
+#### *Sep 2021 — now* | [zoopit.no](https://zoopit.no)
 **Responsibility**
 
 Technical leadership, mentoring, system reliability, architechture, feature design.
