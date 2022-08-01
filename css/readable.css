@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Hack, monospace;
+    line-height: 1.3em;
+}
+
+code {
+    font-family: Hack, monospace;
+    background-color: rgba(0,0,0, 0.1);
+    border-radius: 3px;
+    padding: 0 3px;
+    font-size: 0.9em;
+}

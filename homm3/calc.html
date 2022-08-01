@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>homm3/calc</title>
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <link rel=stylesheet href=//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.css>
+        <link rel=stylesheet media=print href=/css/print.css>
+        <link rel=stylesheet media=screen href=/css/screen.css>
+        <link rel=stylesheet href=/css/readable.css>
+        <link rel=stylesheet href=//cdn.jsdelivr.net/highlight.js/9.1.0/styles/github.min.css>
+        <script type=module src=/js/dark-toggle.js></script>
+        <script type=module src=/js/sw-register.js></script>
+        <style>
+            section {
+                display: flex;
+                flex-wrap: wrap;
+                place-content: space-between;
+            }
+            div {
+                flex-basis: 45%;
+                margin-bottom: 1em;
+            }
+            label {
+                margin: 0.3em 0;
+                display: flex;
+                flex-wrap: wrap;
+                place-content: space-between;
+                border-bottom: 1px dotted;
+            }
+            input {
+                width: 9em;
+                border: none;
+                background-color: inherit;
+                border-bottom: 1px solid;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href=/ >home</a>
+                <a href=https://github.com/qwelias/qwelias.github.io>source</a>
+            </nav>
+            <nav>
+                <a href=https://github.com/qwelias>github</a>
+            </nav>
+        </header>
+        <main>
+            <form id=calc>
+                <output id=result><h2>damage calc</h2></output>
+                <section>
+                    <div>
+                        <label>units
+                            <input id=units type=number min=1 step=1 value=1>
+                        </label>
+                        <label>min dmg
+                            <input id=minDmg type=number min=1 step=1 value=1>
+                        </label>
+                        <label>max dmg
+                            <input id=maxDmg type=number min=1 step=1 value=1>
+                        </label>
+                        <label>attack
+                            <input id=attack type=number min=1 step=1 value=1>
+                        </label>
+                        <label>offence
+                            <input id=offence type=range min=0 max=3 step=1 value=0>
+                        </label>
+                        <label>archery
+                            <input id=archery type=range min=0 max=3 step=1 value=0>
+                        </label>
+                    </div>
+                    <div>
+                        <label>defence
+                            <input id=defence type=number min=1 step=1 value=1>
+                        </label>
+                        <label>armorer
+                            <input id=armorer type=range min=0 max=3 step=1 value=0>
+                        </label>
+                        <label>shield
+                            <input id=shield type=range min=0 max=2 step=1 value=0>
+                        </label>
+                        <label>air shield
+                            <input id=airShield type=range min=0 max=2 step=1 value=0>
+                        </label>
+                        <label>stone skin
+                            <input id=stoneSkin type=range min=0 max=2 step=1 value=0>
+                        </label>
+                    </div>
+                </section>
+            </form>
+        </main>
+    </body>
+    <script>
+        (url => {
+            for (const input of document.querySelectorAll('input')) {
+                input.valueAsNumber = Number(url.searchParams.get(input.id)) || input.valueAsNumber
+            }
+        })(new URL(location.href))
+
+        calc.onsubmit = ev => {
+            ev.preventDefault()
+        }
+        const onchange = calc.onchange = ev => {
+            saveUrl()
+            toggleExcludes(ev?.target)
+
+            result.children[0].innerText = calcDmg().join(' — ')
+        }
+
+        const saveUrl = () => {
+            const url = new URL(location.href)
+            for (const { valueAsNumber, id } of document.querySelectorAll('input')) {
+                url.searchParams.set(id, valueAsNumber)
+            }
+            history.replaceState(null, null, url.href)
+        }
+
+        const calcDmg = () => {
+            const ad = attack.valueAsNumber - defence.valueAsNumber - stoneSkin.valueAsNumber*3
+
+            const am = 1
+                + offence.valueAsNumber*.1
+                + [0, .1, .25, .5][archery.valueAsNumber]
+                + (ad > 0 ? ad*.05 : 0)
+
+            const dm = (1 + (ad < 0 ? .025*ad : 0))
+                * (1 - armorer.valueAsNumber*.05)
+                * (1 - shield.valueAsNumber*.15)
+                * (1 - airShield.valueAsNumber*.25)
+
+            return [minDmg, maxDmg].map(({ valueAsNumber: dmg }) => {
+                return Math.max(dmg*units.valueAsNumber*am*dm|0, 0)
+            })
+        }
+
+        const toggleExcludes = input => {
+            switch (input?.id) {
+            case 'minDmg':
+                maxDmg.valueAsNumber = Math.max(maxDmg.valueAsNumber, minDmg.valueAsNumber)
+                break
+            case 'maxDmg':
+                minDmg.valueAsNumber = Math.min(maxDmg.valueAsNumber, minDmg.valueAsNumber)
+                break
+            case 'archery':
+            case 'airShield':
+                offence.valueAsNumber = 0
+                shield.valueAsNumber = 0
+                break
+            case 'offence':
+            case 'shield':
+                archery.valueAsNumber = 0
+                airShield.valueAsNumber = 0
+                break
+            }
+        }
+        onchange()
+    </script>
+</html>

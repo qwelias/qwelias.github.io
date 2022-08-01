@@ -1,0 +1,31 @@
+:root {
+    --invert: 0;
+    --sepia: 0.1;
+}
+
+html {
+    display: flex;
+    place-content: center;
+    filter: sepia(var(--sepia)) invert(var(--invert));
+    background-color: #dfdfdf;
+    color: #111;
+    min-height: 100%;
+}
+
+body {
+    padding: 1em 1.5em;
+    flex-basis: 100%;
+    margin: 0;
+    max-width: 48em;
+    background-color: #eee;
+}
+
+header {
+    display: flex;
+    place-content: space-between;
+    margin-bottom: 1em;
+}
+
+nav > *+* {
+    margin-left: 2em;
+}
