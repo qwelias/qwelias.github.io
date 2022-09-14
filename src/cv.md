@@ -34,7 +34,7 @@ Open for remote/relocation/local opportunities
 - Plus lots of adjacent infra/DevOps and DataBase things
 - Can work with almost anything as long as it runs on Linux and is not lost to time
 - Occasionally contribute to OSS:
-  - [my GitHub PRs]([https://github.com/pulls?q=is%3Apr+author%3Aqwelias+is%3Amerged](https://github.com/pulls?q=is%3Apr+author%3Aqwelias+))
+  - [my GitHub PRs](https://github.com/pulls?q=is%3Apr+author%3Aqwelias+is%3Amerged](https://github.com/pulls?q=is%3Apr+author%3Aqwelias+)
   - also have some personal projects WIP
 
 ## Education
