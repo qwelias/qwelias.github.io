@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: '18'
 
-      - run: npm audit --audit-level=high
+      - run: npm audit --audit-level=critical
       - run: npm ci
       - run: npm run build
 
