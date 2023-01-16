@@ -53,6 +53,7 @@ Open for remote/relocation/local opportunities
 Technical leadership, mentoring, technical interviews, system reliability, architechture, feature design.
 
 **Done**:
+- implemented reproducible cluster infrastructure setup
 - stabilized system availability
 - standardized logging/monitoring
 - standardized integration testing
@@ -60,7 +61,7 @@ Technical leadership, mentoring, technical interviews, system reliability, archi
 - standardized CI, consolidated depoyment configurations
 - various fixes big and small
 
-**Used**: Docker, bash, NodeJS, MongoDB, TypeScript, Python, OSRM, Vroom
+**Used**: Docker, bash, NodeJS, MongoDB, TypeScript, Python, OSRM, Vroom, Terraform, Nomad, Consul
 
 #### *Feb-2020 — Sep 2021* | Sports API, [vglive.no](https://vglive.no), [malservice.aftonbladet.se](https://malservice.aftonbladet.se)
 **Responsibility**
