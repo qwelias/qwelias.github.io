@@ -34,8 +34,12 @@
 1. User A is able to create/read/write files and directories, user B can only edit the files owned by user A
 
 #### User groups
+##### Using scopes
 1. Create user A
 1. Create user B
 1. Create user G
-1. Assign A and B as owners to G and other entities already owned by G (if any)
+1. Assign A and B scopes `owners/G/any/any`
 1. A and B now can act on entities owned by G or create entities owned by G
+1. Remove the scope from A to remove it from the group
+##### Using owner
+Could also be done via assigning A and B as owners of G, in which case the ownership of entities created by G will be shared and grant/removal of access will be O(N) instead of O(1)
