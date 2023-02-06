@@ -3,3 +3,4 @@
 - [cv](cv)
 - [cards](cards)
 - [noise](noise)
+- [blog](blog)
