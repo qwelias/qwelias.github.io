@@ -65,6 +65,7 @@
                 const inp = e.target.querySelector('input')
                 const hash = await makeHash(inp.value)
                 navigator.clipboard.writeText(hash)
+                inp.value = ''
                 window.close()
             }, true)
         </script>
