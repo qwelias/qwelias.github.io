@@ -1,6 +1,6 @@
 ## Scoped Owner Based Access Control
 ### Key points
-- System data entities consist of resources and users which are able to act upon resources
+- System data entities consist of resources, and users which are able to act upon resources
 - Every entity has a list of owners
 - Every user has a list of scopes
 - A scope is defined as `owners/id/action/namespace`, where
@@ -14,17 +14,17 @@
 
 ### User logic
 - When creating an entity it inherits the list of owners of current user, plus current user
-- It is possible to (un)assign owned users from owned entities
+- It is possible to (un)assign owned users as owners from owned entities
 - Self owns self
 - It is not possible to create ownership loops (if A is owned by B, then B cannot own A)
 - It is possible to grant scopes which are a subset of own scopes
-- Any aritrary `action`/`namespace` is a subset of `any`
+- Any arbitrary `action`/`namespace` is a subset of `any`
 
 ### Example use cases
 #### Ownership transfer
 1. Create user A
 1. Add user A as owner to all owned entities
-1. Remove self from all owned resources
+1. Remove self from all owned entities
 
 #### Delegating permissions
 1. Create user A
