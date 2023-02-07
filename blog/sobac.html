@@ -26,7 +26,7 @@
             <h2 id="scoped-owner-based-access-control" tabindex="-1">Scoped Owner Based Access Control</h2>
 <h3 id="key-points" tabindex="-1">Key points</h3>
 <ul>
-<li>System data entities consist of resources and users which are able to act upon resources</li>
+<li>System data entities consist of resources, and users which are able to act upon resources</li>
 <li>Every entity has a list of owners</li>
 <li>Every user has a list of scopes</li>
 <li>A scope is defined as <code>owners/id/action/namespace</code>, where
@@ -47,18 +47,18 @@
 <h3 id="user-logic" tabindex="-1">User logic</h3>
 <ul>
 <li>When creating an entity it inherits the list of owners of current user, plus current user</li>
-<li>It is possible to (un)assign owned users from owned entities</li>
+<li>It is possible to (un)assign owned users as owners from owned entities</li>
 <li>Self owns self</li>
 <li>It is not possible to create ownership loops (if A is owned by B, then B cannot own A)</li>
 <li>It is possible to grant scopes which are a subset of own scopes</li>
-<li>Any aritrary <code>action</code>/<code>namespace</code> is a subset of <code>any</code></li>
+<li>Any arbitrary <code>action</code>/<code>namespace</code> is a subset of <code>any</code></li>
 </ul>
 <h3 id="example-use-cases" tabindex="-1">Example use cases</h3>
 <h4 id="ownership-transfer" tabindex="-1">Ownership transfer</h4>
 <ol>
 <li>Create user A</li>
 <li>Add user A as owner to all owned entities</li>
-<li>Remove self from all owned resources</li>
+<li>Remove self from all owned entities</li>
 </ol>
 <h4 id="delegating-permissions" tabindex="-1">Delegating permissions</h4>
 <ol>
