@@ -66,7 +66,7 @@
                 const hash = await makeHash(inp.value)
                 navigator.clipboard.writeText(hash)
                 inp.value = ''
-                setTimeout(() => window.close(), 1)
+                setTimeout(() => window.close(), 500)
             }, true)
         </script>
     </body>
