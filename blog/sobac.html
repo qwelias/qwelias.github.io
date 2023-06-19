@@ -29,57 +29,48 @@
 <li>System data entities consist of resources, and users which are able to act upon resources</li>
 <li>Every entity has a list of owners</li>
 <li>Every user has a list of scopes</li>
-<li>A scope is defined as <code>owners/id/action/namespace</code>, where
+<li>A scope is defined as <code>prefix/id/action/namespace</code>, where
 <ul>
-<li><code>owners</code> is a static prefix, could be useful in future to avoid conflicts with extensions</li>
-<li><code>id</code> is one of:
-<ul>
-<li>a user's ID</li>
-<li><code>self</code> indicating current user's ID</li>
-<li><code>any</code></li>
-</ul>
-</li>
-<li><code>action</code> either <code>any</code> or is a specific action allowed to perform (read, write, list, edit, etc. depeding on business-logic)</li>
-<li><code>namespace</code> either <code>any</code> or entity type name to performe the <code>action</code> on</li>
+<li><code>prefix</code> is a static prefix, could be useful in future to avoid conflicts with extensions</li>
+<li><code>id</code> is an ID of entity owner</li>
+<li><code>action</code> is a specific action allowed to perform (read, write, list, edit, etc. depeding on business-logic)</li>
+<li><code>namespace</code> is entity type name to perform the <code>action</code> on</li>
+<li>each of those can be <code>any</code>, specific value works as a subset of <code>any</code></li>
 </ul>
 </li>
 </ul>
 <h3 id="user-logic" tabindex="-1">User logic</h3>
 <ul>
 <li>When creating an entity it inherits the list of owners of current user, plus current user</li>
-<li>It is possible to (un)assign owned users as owners from owned entities</li>
-<li>Self owns self</li>
 <li>It is not possible to create ownership loops (if A is owned by B, then B cannot own A)</li>
 <li>It is possible to grant scopes which are a subset of own scopes</li>
-<li>Any arbitrary <code>action</code>/<code>namespace</code> is a subset of <code>any</code></li>
 </ul>
 <h3 id="example-use-cases" tabindex="-1">Example use cases</h3>
 <h4 id="ownership-transfer" tabindex="-1">Ownership transfer</h4>
 <ol>
 <li>Create user A</li>
+<li>Grant A all possible scopes</li>
 <li>Add user A as owner to all owned entities</li>
 <li>Remove self from all owned entities</li>
 </ol>
 <h4 id="delegating-permissions" tabindex="-1">Delegating permissions</h4>
 <ol>
 <li>Create user A</li>
-<li>Grant user A scope <code>owners/self/any/files</code>, <code>owners/self/any/directories</code> (do anything with owned files and directories)</li>
+<li>Grant user A scope <code>prefix/A/any/files</code>, <code>prefix/A/any/directories</code> (do anything with owned files and directories)</li>
 <li>User A creates user B</li>
 <li>User A grants B scope <code>owners/A/write/files</code></li>
 <li>User A is able to create/read/write files and directories, user B can only edit the files owned by user A</li>
 </ol>
 <h4 id="user-groups" tabindex="-1">User groups</h4>
-<h5 id="using-scopes" tabindex="-1">Using scopes</h5>
+<h5 id="via-scopes" tabindex="-1">Via scopes</h5>
 <ol>
 <li>Create user A</li>
 <li>Create user B</li>
 <li>Create user G</li>
-<li>Assign A and B scopes <code>owners/G/any/any</code></li>
+<li>Assign A and B scope <code>prefix/G/any/any</code></li>
 <li>A and B now can act on entities owned by G or create entities owned by G</li>
 <li>Remove the scope from A to remove it from the group</li>
 </ol>
-<h5 id="using-owner" tabindex="-1">Using owner</h5>
-<p>Could also be done via assigning A and B as owners of G, in which case the ownership of entities created by G will be shared and grant/removal of access will be O(N) instead of O(1)</p>
 
         </main>
     </body>
