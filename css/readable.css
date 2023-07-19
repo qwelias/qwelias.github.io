@@ -8,6 +8,7 @@ html {
 }
 
 code {
+    display: inline-block;
     font-family: Hack, monospace;
     background-color: rgba(0,0,0, 0.1);
     border-radius: 3px;
