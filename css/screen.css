@@ -29,3 +29,7 @@ header {
 nav > *+* {
     margin-left: 2em;
 }
+
+code {
+    display: inline-block;
+}
