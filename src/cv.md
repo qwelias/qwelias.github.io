@@ -30,7 +30,7 @@ Open for remote/relocation/local opportunities
 ## Summary
 - Full stack engineer since ~September 2014
 - Linux all the way
-- Mostly do NodeJS-related things
+- Mostly do NodeJS-related things, actively learning Zig
 - Plus lots of adjacent infra/DevOps and DataBase things
 - Can work with almost anything as long as it runs on Linux and is not lost to time
 - Occasionally contribute to OSS:
@@ -45,9 +45,14 @@ Open for remote/relocation/local opportunities
 
 ## Employments
 
+### [zoopit.no](https://zoopit.no)
+
+#### *Apr 2023 — Now* | [zoopit.no](https://zoopit.no)
+Basically coninuation of previous position (after some org changes) under CTO title with some extra responsibilities.
+
 ### [Schibsted](https://schibsted.com/about/)
 
-#### *Sep 2021 — now* | [zoopit.no](https://zoopit.no)
+#### *Sep 2021 — Mar 2023* | [zoopit.no](https://zoopit.no)
 **Responsibility**
 
 Technical leadership, mentoring, technical interviews, system reliability, architechture, feature design.
