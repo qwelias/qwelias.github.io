@@ -9,6 +9,7 @@ Software Engineer and whatnot
 - [Education](#education)
   - [Ural Federal University](#ural-federal-university)
 - [Employments](#employments)
+  - [zoopit.no](#zoopit.no)
   - [Schibsted](#schibsted)
   - [EPAM Systems](#epam-systems)
   - [Ridero](#ridero)
