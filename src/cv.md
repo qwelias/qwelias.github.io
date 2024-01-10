@@ -16,7 +16,7 @@ Software Engineer and whatnot
 
 ## Contacts
 - [Telegram](https://t.me/qwelias)
-- [contact@qwelias.me](mailto:contact@qwelias.me)
+- [qwelias@gmail.com](mailto:qwelias@gmail.com)
 
 ## Base
 Male
