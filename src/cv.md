@@ -48,7 +48,7 @@ Open for remote/relocation/local opportunities
 
 ### [zoopit.no](https://zoopit.no)
 
-#### *Apr 2023 — Now* | [zoopit.no](https://zoopit.no)
+#### *Apr 2023 — Apr 2024* | [zoopit.no](https://zoopit.no)
 Basically coninuation of previous position (after some org changes) under CTO title with some extra responsibilities.
 
 ### [Schibsted](https://schibsted.com/about/)
