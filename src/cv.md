@@ -49,7 +49,18 @@ Open for remote/relocation/local opportunities
 ### Self-employed
 
 #### *May 2024 — Now* | Independent Contractor
-Remote Software engineering work for a US client.
+Remote Software engineering work.
+
+What expertice I offer:
+- Full-stack development
+- Systems development
+- DevOps
+- Egineering management
+
+What I usually work with:
+- Code: TS / JS (NodeJS) / Terraform / Zig / Go
+- Data storage and messaging: PosgreSQL / MySQL / MongoDB / Redis / RabbitMQ
+- Infrastructire: Linux / bash / Docker / Caddy / Nomad / Consul / Kubernetes / iproute2 / iptables / LVM
 
 ### [zoopit.no](https://zoopit.no)
 
