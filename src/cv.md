@@ -46,6 +46,11 @@ Open for remote/relocation/local opportunities
 
 ## Employments
 
+### Self-employed
+
+#### *May 2024 — Now* | Independent Contractor
+Remote Software engineering work for a US client.
+
 ### [zoopit.no](https://zoopit.no)
 
 #### *Apr 2023 — Apr 2024* | [zoopit.no](https://zoopit.no)
