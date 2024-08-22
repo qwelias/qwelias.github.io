@@ -9,11 +9,12 @@ Software Engineer and whatnot
 - [Education](#education)
   - [Ural Federal University](#ural-federal-university)
 - [Employments](#employments)
-  - [zoopit.no](#zoopit.no)
-  - [Schibsted](#schibsted)
-  - [EPAM Systems](#epam-systems)
-  - [Ridero](#ridero)
-  - [JetTeam](#jetteam)
+  - [Self-employed](#self-employed-2024--now)
+  - [zoopit.no](#zoopitno-2021--2024)
+  - [Schibsted](#schibsted-2020--2021)
+  - [EPAM Systems](#epam-systems-2017--2020)
+  - [Ridero](#ridero-2016--2017)
+  - [JetTeam](#jetteam-2014--2016)
 
 ## Contacts
 - [Telegram](https://t.me/qwelias)
@@ -46,7 +47,7 @@ Open for remote/relocation/local opportunities
 
 ## Employments
 
-### Self-employed
+### Self-employed 2024 — Now
 
 #### *May 2024 — Now* | Independent Contractor
 Remote Software engineering work.
@@ -62,14 +63,9 @@ What I usually work with:
 - Data storage and messaging: PosgreSQL / MySQL / MongoDB / Redis / RabbitMQ
 - Infrastructire: Linux / bash / Docker / Caddy / Nomad / Consul / Kubernetes / iproute2 / iptables / LVM
 
-### [zoopit.no](https://zoopit.no)
+### [zoopit.no](https://zoopit.no) 2021 — 2024
 
-#### *Apr 2023 — Apr 2024* | [zoopit.no](https://zoopit.no)
-Basically coninuation of previous position (after some org changes) under CTO title with some extra responsibilities.
-
-### [Schibsted](https://schibsted.com/about/)
-
-#### *Sep 2021 — Mar 2023* | [zoopit.no](https://zoopit.no)
+#### *Sep 2021 — Apr 2024* | [zoopit.no](https://zoopit.no)
 **Responsibility**
 
 Technical leadership, mentoring, technical interviews, system reliability, architechture, feature design.
@@ -84,6 +80,9 @@ Technical leadership, mentoring, technical interviews, system reliability, archi
 - various fixes big and small
 
 **Used**: Docker, bash, NodeJS, MongoDB, TypeScript, Python, OSRM, Vroom, Terraform, Nomad, Consul
+
+
+### [Schibsted](https://schibsted.com/about/) 2020 — 2021
 
 #### *Feb-2020 — Sep 2021* | Sports API, [vglive.no](https://vglive.no), [malservice.aftonbladet.se](https://malservice.aftonbladet.se)
 **Responsibility**
@@ -100,7 +99,7 @@ Design, development, and maintenance of new and existing solutions for sports da
 
 **Used**: Docker, bash, NodeJS, AWS, Terraform, Redis, PostgreSQL, TypeScript, Kubernetes, Jenkins
 
-### [EPAM Systems](https://www.epam.com)
+### [EPAM Systems](https://www.epam.com) 2017 — 2020
 
 #### *Jan-2019 — Jan-2020* | Launcher Daemon for [Epic Games](https://www.epicgames.com)
 **Responsibility**
@@ -149,7 +148,7 @@ Development and support of Web-based live and on-demand media delivery platform 
 
 **Used**: Headless Chrome, Python, JS, Firebase Cloud Messaging
 
-### [Ridero](https://ridero.ru)
+### [Ridero](https://ridero.ru) 2016 — 2017
 
 #### *Nov-2016 — Mar-2017* | Smart publishing system for everyone to create professional quality books
 **Responsibility**
@@ -166,7 +165,7 @@ Development of internal tools for and web admin interface.
 
 **Used**: MongoDB, MySQL, AWS, NodeJS, ReactJS, Kubernetes, InfluxDB, Jenkins
 
-### [JetTeam](https://jet.team)
+### [JetTeam](https://jet.team) 2014 — 2016
 
 #### *Jul-2016 — Nov-2016* | Talmoloko. Daily delivery of dairy products
 **Responsibility**
