@@ -38,6 +38,7 @@ Open for remote/relocation/local opportunities
 - Occasionally contribute to OSS:
   - [my GitHub PRs](https://github.com/pulls?q=is%3Apr+author%3Aqwelias)
   - also have some personal projects WIP
+- AI-free
 
 ## Education
 
