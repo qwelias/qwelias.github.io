@@ -11,6 +11,9 @@
                 overflow: hidden;
                 box-sizing: content-box;
             }
+            video {
+                object-fit: fill;
+            }
         </style>
     </head>
     <body>
@@ -22,6 +25,8 @@
             vid.src = URL.createObjectURL(vid_file.files[0])
             vid.load()
             vid_file.style.display = 'none'
+            const body = document.body
+            ;(body.requestFullScreen || body.webkitRequestFullScreen || body.mozRequestFullScreen || body.msRequestFullScreen)()
         })
     </script>
 </html>
