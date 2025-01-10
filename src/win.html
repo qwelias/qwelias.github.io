@@ -10,6 +10,7 @@
             * {
                 overflow: hidden;
                 box-sizing: content-box;
+                background-color: #1f2124;
             }
             video {
                 height: 100vh;
@@ -17,11 +18,24 @@
                 object-fit: fill;
                 position: absolute;
             }
+            header {
+                color: white;
+                font-family: sans-serif;
+                font-weight: 500;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 50%;
+                height: 3vh;
+                padding-left: 2%;
+                padding-top: 3%;
+            }
         </style>
     </head>
     <body>
-        <input type="file" accept="video/*" id="vid_file">
+        <input type="file" accept="video/*" id="vid_file">FILE</input>
         <video id="vid" autoplay loop muted></video>
+        <header id="time_top"></header>
     </body>
     <script>
         vid_file.addEventListener('change', (ev) => {
@@ -29,6 +43,10 @@
             vid.load()
             vid_file.style.display = 'none'
             document.body.requestFullscreen()
+            setInterval(() => {
+                const time = new Date().toLocaleTimeString().split(':').slice(0,2).join(':');
+                time_top.innerHTML = time;
+            }, 1000)
         })
     </script>
 </html>
