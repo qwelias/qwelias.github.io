@@ -28,8 +28,7 @@
             vid.src = URL.createObjectURL(vid_file.files[0])
             vid.load()
             vid_file.style.display = 'none'
-            const body = document.body
-            ;(body.requestFullScreen || body.webkitRequestFullScreen || body.mozRequestFullScreen || body.msRequestFullScreen)()
+            document.body.requestFullscreen()
         })
     </script>
 </html>
