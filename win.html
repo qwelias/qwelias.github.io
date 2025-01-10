@@ -8,6 +8,7 @@
                 margin: 0;
             }
             * {
+                font-family: sans-serif;
                 overflow: hidden;
                 box-sizing: content-box;
                 background-color: #1f2124;
@@ -20,9 +21,11 @@
                 left: 0;
                 top: 0;
             }
+            input {
+                position: absolute;
+            }
             header {
                 color: white;
-                font-family: sans-serif;
                 font-weight: 500;
                 position: absolute;
                 top: 0;
@@ -32,12 +35,24 @@
                 padding-left: 3%;
                 padding-top: 4%;
             }
+            h5 {
+                background-color: #2c2e34;
+                color: #95979f;
+                font-weight: 500;
+                position: absolute;
+                font-size: 1em;
+                top: 11.5%;
+                left: 66.1%;
+                padding: 0.5em;
+                text-align: center;
+            }
         </style>
     </head>
     <body>
-        <input type="file" accept="video/*" id="vid_file">FILE</input>
         <video id="vid" autoplay loop muted></video>
         <header id="time_top"></header>
+        <h5 id="time_mid"></h5>
+        <input type="file" accept="video/*" id="vid_file">FILE</input>
     </body>
     <script>
         vid_file.addEventListener('change', (ev) => {
@@ -48,6 +63,7 @@
             setInterval(() => {
                 const time = new Date().toLocaleTimeString().split(':').slice(0,2).join(':');
                 time_top.innerHTML = time;
+                time_mid.innerHTML = time;
             }, 1000)
         })
     </script>
