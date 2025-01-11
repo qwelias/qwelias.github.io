@@ -37,7 +37,7 @@
             }
             h5 {
                 background-color: #2c2e34;
-                color: #b2b2b2;
+                color: #b4b4b4;
                 font-weight: 400;
                 position: absolute;
                 font-size: 1em;
@@ -66,6 +66,7 @@
                 const time = new Date().toLocaleTimeString().split(':').slice(0,2).join(':');
                 time_top.innerHTML = time;
                 time_mid.innerHTML = time;
+                vid.load();
             }, 1000)
         })
     </script>
