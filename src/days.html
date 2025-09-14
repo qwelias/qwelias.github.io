@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>days</title>
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <link rel=stylesheet href=//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.css>
+        <link rel=stylesheet media=print href=/css/print.css>
+        <link rel=stylesheet media=screen href=/css/screen.css>
+        <link rel=stylesheet href=/css/readable.css>
+        <link rel=stylesheet href=//cdn.jsdelivr.net/highlight.js/9.1.0/styles/github.min.css>
+        <script type=module src=/js/dark-toggle.js></script>
+        <script type=module src=/js/sw-register.js></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href=/ >home</a>
+                <a href=https://github.com/qwelias/qwelias.github.io>source</a>
+            </nav>
+            <nav>
+                <a href=https://github.com/qwelias>github</a>
+            </nav>
+        </header>
+        <form>
+            <section id="inputs">
+            </section>
+            <button id="newInput" type="button">+</button>
+            <pre id="outputs">
+            </pre>
+        </form>
+        <script>
+            'use strict'
+
+            const oneDay = 24*60*60*1000
+            const now = Date.now()
+            const year = Number(new Date().setFullYear(new Date().getFullYear() - 1))
+
+            const update = () => {
+                try {
+                    const dates = [...document.querySelectorAll('input[type=date]')]
+                    const ccs = [...document.querySelectorAll('input[type=text]')]
+
+                    const ds = []
+                    const cs = []
+                    const sums = {}
+                    let pd = null
+                    let pc = null
+                    dates.map((dd, i) => {
+                        const cc = ccs[i].value
+                        cs.push(cc)
+
+                        const ts = Date.parse(dd.value)
+                        ds.push(dd.value)
+
+                        if (pd) {
+                            sums[pc] = sums[pc] || 0
+                            const diff = Math.max(0, Math.min(ts - pd, ts - year))
+                            sums[pc] += diff/oneDay
+                        }
+
+                        pd = ts
+                        pc = cc
+                    })
+
+                    if (pd) {
+                        sums[pc] = sums[pc] || 0
+                        sums[pc] += (now - pd)/oneDay
+                    }
+
+                    outputs.textContent = Object.entries(sums).map(([cc, dd]) => cc + ': ' + (dd|0)).join('\n')
+
+                    localStorage.ds = ds.join()
+                    localStorage.cs = cs.join()
+                } catch (err) {
+                    const { message, stack, name } = err
+                    outputs.textContent = [name, message, stack].join('\n')
+                }
+            }
+
+            const addInput = (date, code) => {
+                const div = document.createElement('div')
+                const dd = document.createElement('input')
+                dd.type = 'date'
+                dd.addEventListener('input', update)
+                if (date && code) dd.value = date
+                div.append(dd)
+
+                const cc = document.createElement('input')
+                cc.type = 'text'
+                cc.size = 2
+                cc.addEventListener('input', update)
+                if (date && code) cc.value = code
+                div.append(cc)
+
+                const rm = document.createElement('button')
+                rm.textContent = '-'
+                rm.type = 'button'
+                rm.addEventListener('click', () => { div.remove(); update() })
+                div.append(rm)
+
+                inputs.append(div)
+            }
+
+            const ds = localStorage.ds?.split(',')
+            const cs = localStorage.cs?.split(',')
+            if (ds && cs) {
+                ds.map((dd, i) => addInput(dd, cs[i]))
+                update()
+            }
+
+            newInput.addEventListener('click', addInput)
+        </script>
+    </body>
+</html>
