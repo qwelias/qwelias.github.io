@@ -113,8 +113,8 @@
                 history.replaceState(null, '', url.href)
             }
 
-            const ds = (localStorage.ds || url.searchParams.get(ds))?.split(',')
-            const cs = (localStorage.cs || url.searchParams.get(cs))?.split(',')
+            const ds = (localStorage.ds || url.searchParams.get('ds'))?.split(',')
+            const cs = (localStorage.cs || url.searchParams.get('cs'))?.split(',')
             if (ds && cs) {
                 ds.map((dd, i) => addInput(dd, cs[i]))
                 update()
