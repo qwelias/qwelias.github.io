@@ -23,6 +23,7 @@
             </nav>
         </header>
         <form>
+            <input id=nowinp type="datetime-local">
             <section id="inputs">
             </section>
             <button id="newInput" type="button">+</button>
@@ -32,11 +33,14 @@
         <script>
             'use strict'
 
+            const url = new URL(location.href)
+            nowinp.value = new Date().toLocaleString("sv-SE").replace(" ", "T").slice(0,16);
             const oneDay = 24*60*60*1000
-            const now = Date.now()
-            const year = Number(new Date().setFullYear(new Date().getFullYear() - 1))
 
             const update = () => {
+                const now = Date.parse(nowinp.value)
+                const year = Number(new Date(now).setFullYear(new Date(now).getFullYear() - 1))
+                
                 try {
                     const dates = [...document.querySelectorAll('input[type=date]')]
                     const ccs = [...document.querySelectorAll('input[type=text]')]
@@ -72,6 +76,7 @@
 
                     localStorage.ds = ds.join()
                     localStorage.cs = cs.join()
+                    updateUrl()
                 } catch (err) {
                     const { message, stack, name } = err
                     outputs.textContent = [name, message, stack].join('\n')
@@ -102,13 +107,21 @@
                 inputs.append(div)
             }
 
-            const ds = localStorage.ds?.split(',')
-            const cs = localStorage.cs?.split(',')
+            const updateUrl = () => {
+                url.searchParams.set('ds', localStorage.ds)
+                url.searchParams.set('cs', localStorage.cs)
+                history.replaceState(null, '', url.href)
+            }
+
+            const ds = (localStorage.ds || url.searchParams.get(ds))?.split(',')
+            const cs = (localStorage.cs || url.searchParams.get(cs))?.split(',')
             if (ds && cs) {
                 ds.map((dd, i) => addInput(dd, cs[i]))
                 update()
+                updateUrl()
             }
 
+            nowinp.addEventListener('change', update)
             newInput.addEventListener('click', addInput)
         </script>
     </body>
